@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Feedback — AutoPyAI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <style>
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subhead {
+      color: #555;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 500;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      border-left: 4px solid #3498db;
+      position: relative;
+    }
+
+    .testimonial-card:before {
+      content: """;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 4rem;
+      color: #f0f0f0;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .author-info p {
+      margin: 0;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .no-feedback {
+      text-align: center;
+      padding: 4rem;
+      color: #7f8c8d;
+      font-style: italic;
+      background: #f9f9f9;
+      border-radius: 12px;
+    }
+
+    .call-to-action {
+      text-align: center;
+      margin: 4rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      border-radius: 12px;
+    }
+
+    .call-to-action h2 {
+      margin-bottom: 1rem;
+    }
+
+    .call-to-action a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .footer-brand {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Software <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
+                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="rag-basic.html">RAG Basic</a></li>
+                <li><a href="rag-advanced.html">RAG Advanced</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="agentic-basic.html">Agentic Basic</a></li>
+                <li><a href="agentic-pro.html">Agentic Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
+                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Client's Feedback</h1>
+    <p class="hero-subhead">Hear what users are saying about our Python automation and AI tools.</p>
+
+    <div class="testimonial-grid">
+      <!-- Placeholder Testimonials — Replace These Later -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">I used the YouTube Multi Extractor to pull data from 200+ channels for my market research project. It saved me over 40 hours of manual work. The script works perfectly offline!</p>
+        <div class="testimonial-author">
+          <div class="avatar">MA</div>
+          <div class="author-info">
+            <h4>Muhammad Ali</h4>
+            <p>Market Researcher, Lahore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">As a PhD student, I needed to analyze research papers quickly. RAG Basic lets me ask questions directly from my PDFs. No more copying text manually. Game-changer.</p>
+        <div class="testimonial-author">
+          <div class="avatar">SR</div>
+          <div class="author-info">
+            <h4>Sara Rahman</h4>
+            <p>PhD Candidate, Islamabad</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">The Chatbot Pro tool helped me automate customer replies on my small e-commerce store. My response time dropped from 8 hours to under 10 minutes. Worth every penny.</p>
+        <div class="testimonial-author">
+          <div class="avatar">AK</div>
+          <div class="author-info">
+            <h4>Ayesha Khan</h4>
+            <p>Small Business Owner, Faisalabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- If no feedback yet, show this message (optional) -->
+    <!-- 
+    <div class="no-feedback">
+      We're building our first community of users — be the first to leave feedback!
+    </div>
+    -->
+
+    <div class="call-to-action">
+      <h2>Want to Be Featured Here?</h2>
+      <p>Use any of our tools and share your experience. We’ll feature your story here — with your permission.</p>
+      <a href="feedback-form.html">→ Leave Your Feedback Now</a>
+    </div>
+
+    <div class="footer-brand">
+      © 2025 AutoPyAI — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>

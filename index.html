@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPyAI — Python Automation Powered by AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <style>
+    /* Homepage-specific styling */
+    main {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(231, 76, 54, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-left: 4px solid #3498db;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-card h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .feature-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .footer-brand {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Software <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
+                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="rag-basic.html">RAG Basic</a></li>
+                <li><a href="rag-advanced.html">RAG Advanced</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="agentic-basic.html">Agentic Basic</a></li>
+                <li><a href="agentic-pro.html">Agentic Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
+                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Smart Apps for Business</h1>
+      <p>Automating your daily tasks with smart Python applications.</p>
+      <p>AI RAG systems, Agentic AI, and Chatbots for productivity.</p>
+      <a href="payment.html" class="cta-button">See All Tools →</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>✅ Offline Automation</h3>
+        <p>No cloud, no API keys. Run all tools locally on Windows, Mac, or Linux — your data stays private.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>⚡ One-Click Setup</h3>
+        <p>Just download, unzip, and run. No complex installation or configuration required.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>💼 Lifetime Updates</h3>
+        <p>One-time payment. Get free updates and new features forever — no subscriptions.</p>
+      </div>
+    </section>
+
+    <div class="footer-brand">
+      © 2025 AutoPyAI — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>

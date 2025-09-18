@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — AutoPyAI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <style>
+    .hero {
+      text-align: center;
+      padding: 3rem 0;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid #eee;
+    }
+
+    .hero h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      border-left: 4px solid #3498db;
+    }
+
+    .feature-card h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .feature-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ EMBEDDED HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Software <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
+                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="rag-basic.html">RAG Basic</a></li>
+                <li><a href="rag-advanced.html">RAG Advanced</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="agentic-basic.html">Agentic Basic</a></li>
+                <li><a href="agentic-pro.html">Agentic Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
+                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>If you have any questions about my Python automation tools, RAG systems, Agentic AI, or chatbots — I'd love to hear from you.</p>
+    </section>
+
+    <div class="feature-card">
+      <h2>Our Contact Details</h2>
+      <p><strong>Email:</strong> <a href="mailto:autopyai@gmail.com">autopyai@gmail.com</a></p>
+      <p><strong>WhatsApp / Phone:</strong> <a href="tel:+92XXXXXXXXXX">+92 XXX XXXXXXX</a> (Pakistan)</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/AutoPyAi" target="_blank">github.com/AutoPyAi</a></p>
+    </div>
+
+    <div class="feature-card">
+      <h2>Send Me a Message</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option value="Purchase Inquiry">Purchase Inquiry</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Feature Request">Feature Request</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me how I can help..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+
+    <div class="footer-brand">
+      © 2025 AutoPyAI — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>

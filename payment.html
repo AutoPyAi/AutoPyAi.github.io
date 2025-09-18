@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Options — AutoPyAI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <style>
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .payment-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-left: 4px solid #3498db;
+      transition: transform 0.3s;
+    }
+
+    .payment-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .payment-card h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .payment-card p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .payment-info strong {
+      color: #3498db;
+    }
+
+    .payment-form {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      margin-top: 3rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ EMBEDDED HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Software <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
+                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="rag-basic.html">RAG Basic</a></li>
+                <li><a href="rag-advanced.html">RAG Advanced</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="agentic-basic.html">Agentic Basic</a></li>
+                <li><a href="agentic-pro.html">Agentic Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
+                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="section-title">Payment Options</h1>
+
+    <div class="payment-methods">
+      <div class="payment-card">
+        <h3>🌍 For International Buyers (Payoneer)</h3>
+        <p><strong>Email:</strong> <a href="mailto:autopyai@gmail.com">autopyai@gmail.com</a></p>
+        <p>Send payment via Payoneer or PayPal to this email.</p>
+      </div>
+
+      <div class="payment-card">
+        <h3>🏦 For Local Buyers (Bank Transfer)</h3>
+        <p><strong>Bank Name:</strong> [Your Bank Name]</p>
+        <p><strong>Account Number:</strong> XXXXXXX</p>
+        <p><strong>Account Holder:</strong> Suhail Asghar</p>
+      </div>
+
+      <div class="payment-card">
+        <h3>📱 For JazCash / EasyPaisa (Pakistan)</h3>
+        <p><strong>Mobile Number:</strong> <a href="tel:+92XXXXXXXXXX">+92 XXX XXXXXXX</a></p>
+        <p>Transfer funds directly using JazCash or EasyPaisa app.</p>
+      </div>
+    </div>
+
+    <div class="payment-form">
+      <h2>Need Help? Send Us a Message</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us which tool you'd like to buy..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+
+    <div class="footer-brand">
+      © 2025 AutoPyAI — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>
