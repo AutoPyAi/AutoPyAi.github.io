@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG Basic — AI-Powered Document Intelligence | AutoPyAI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <style>
+    /* Product-specific styling */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .hero-subhead {
+      font-size: 1.4rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 3rem;
+    }
+
+    .feature-list {
+      margin: 2rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .feature-list li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .feature-list li:before {
+      content: "✓";
+      color: #3498db;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: #f0f7ff;
+      color: #3498db;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin: 0 5px 10px 0;
+    }
+
+    .buy-section {
+      text-align: center;
+      margin: 4rem 0;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+    }
+
+    .buy-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .buy-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 1rem;
+    }
+
+    .buy-btn:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    .screenshot-container {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .screenshot-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .footer-brand {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .use-case {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border-left: 4px solid #3498db;
+    }
+
+    .use-case h3 {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Software <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
+                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="rag-basic.html">RAG Basic</a></li>
+                <li><a href="rag-advanced.html">RAG Advanced</a></li>
+              </ul>
+            </li>
+         <!--
+            <li>
+              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="agentic-basic.html">Agentic Basic</a></li>
+                <li><a href="agentic-pro.html">Agentic Pro</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
+              <ul class="submenu">
+                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
+                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>  -->
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Chatbot Pro</h1>
+    <p class="hero-subhead">Transform your documents into an intelligent assistant — no cloud, no API, just Python.</p>
+    <b>Comming Soon....</b> 
+<!--
+    <div class="use-case">
+      <h3>Perfect For:</h3>
+      <p>Researchers, students, analysts, and small businesses who need to extract insights from PDFs, Word files, or Excel spreadsheets — without writing code.</p>
+    </div>
+
+    <h2>Key Features</h2>
+    <ul class="feature-list">
+      <li>Connects to your local document folder — no uploads, no privacy risk</li>
+      <li>Uses advanced RAG (Retrieval-Augmented Generation) to answer questions based on your files</li>
+      <li>Supports PDF, DOCX, TXT, XLSX — all major formats</li>
+      <li>Runs offline on Windows, Mac, or Linux — no internet required after setup</li>
+      <li>Integrates with any LLM (OpenAI, Ollama, Groq, etc.) — choose your own model</li>
+      <li>Exports answers to text or CSV for reporting</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <ol class="feature-list">
+      <li>Download and unzip the tool</li>
+      <li>Place your documents in the <code>docs/</code> folder</li>
+      <li>Run <code>rag_basic.py</code></li>
+      <li>Type your question — get instant, accurate answers</li>
+    </ol>
+
+    <div class="screenshot-container">
+      <img src="rag-screenshot.png" alt="RAG Basic Interface - Ask Questions to Your Documents" width="700">
+      <p class="small" style="margin-top: 1rem; color: #7f8c8d;">*Example interface — your actual tool will look similar</p>
+    </div>
+
+    <div class="buy-section">
+      <h2>Ready to Turn Documents Into AI Answers?</h2>
+      <p>One-time payment. Lifetime updates. No subscriptions. Zero cloud dependency.</p>
+      <a href="https://payoneer.com/your-link" class="buy-btn">Buy Now — $39 One-Time</a>
+    </div>
+-->
+
+    <div class="footer-brand">
+      © 2025 RAG Basic — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>
