@@ -78,8 +78,8 @@ header {
   flex-direction: column;
   border-radius: 5px;
   z-index: 1000;
-  margin-top: 0;
-  padding: 0;
+  margin-top: 0; /* Remove any top margin */
+  padding: 0; /* Remove any padding */
 }
 
 .submenu li {
@@ -110,7 +110,7 @@ header {
 .submenu .submenu {
   top: 0;
   left: 100%;
-  margin-top: -1px;
+  margin-top: -1px; /* This removes the gap by moving it up slightly */
   min-width: 220px;
 }
 
