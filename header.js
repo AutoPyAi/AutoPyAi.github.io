@@ -13,8 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
   submenuToggles.forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent event from bubbling up to parent links
-      e.preventDefault();  // Prevent default link behavior
+      e.stopPropagation(); // Prevent event from bubbling up
+      e.preventDefault();  // Prevent link navigation
+      
       const submenu = btn.nextElementSibling;
       if (submenu && submenu.classList.contains("submenu")) {
         submenu.classList.toggle("open");
@@ -23,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // On mobile: close menu when clicking any link
+  // On mobile: close main menu only if clicked outside submenu
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
-        // Only close if clicked link is NOT a submenu toggle
-        if (!e.target.classList.contains('submenu-toggle')) {
+        // Only close if clicked link is NOT a submenu toggle or inside a submenu
+        if (!e.target.closest('.submenu') && !e.target.classList.contains('submenu-toggle')) {
           menu.classList.remove('active');
         }
       }
