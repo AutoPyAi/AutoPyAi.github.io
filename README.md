@@ -34,18 +34,6 @@ All tools are:
 
 ---
 
-## 💬 Real Feedback
-
-> _“Saved me 40 hours/month analyzing research papers. No more copy-pasting!”_  
-> — Sara Rahman, PhD Candidate, Islamabad
-
-> _“My e-commerce store now replies to customers automatically. Response time dropped from 8h to 10min.”_  
-> — Ayesha Khan, Small Business Owner, Faisalabad
-
-*(Want to be featured? [Leave feedback](https://autopyai.github.io/feedback-form.html))*
-
----
-
 ## 💰 How to Buy
 
 All tools are sold via **Payoneer** (global) or **JazzCash** (Pakistan).
