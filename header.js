@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Handle submenu toggles (mobile only)
+  // Handle ALL submenu toggles — including nested ones
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
   submenuToggles.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // On mobile: close menu when clicking a link
+  // On mobile: close menu when clicking any link
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
@@ -31,17 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Desktop: allow normal navigation on top-level links (Home, About, etc.)
-  // But prevent navigation on items with submenus — let JS handle expand/collapse
+  // On desktop: prevent top-level links with submenus from navigating
   document.querySelectorAll('.menu > li > a').forEach(link => {
     const hasSubmenu = link.nextElementSibling?.classList.contains('submenu');
     if (hasSubmenu) {
       link.addEventListener('click', (e) => {
         if (window.innerWidth > 768) {
-          // On desktop: do nothing — hover controls the submenu
           e.preventDefault();
         }
-        // On mobile, we already handled it above via .submenu-toggle
       });
     }
   });
