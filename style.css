@@ -99,7 +99,7 @@ header {
 
 /* Desktop: Show dropdown on hover */
 .menu > li:hover > .submenu,
-.menu > li:focus-within > .submenu {
+.submenu li:hover > .submenu {
   display: flex;
   flex-direction: column;
 }
@@ -143,13 +143,13 @@ header {
     display: flex;
   }
 
-/* ✅ NEW RULE: Make nested submenus visible when .open is added */
-.submenu.open {
-  display: flex;
-  flex-direction: column;
-}
+  /* ✅ NEW RULE: Make nested submenus visible when .open is added */
+  .submenu.open {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Submenu styling for mobile */
+  /* Submenu styling for mobile */
   .submenu {
     position: static;
     display: none;
@@ -157,6 +157,7 @@ header {
     border-radius: 0;
     width: 100%;
     margin: 0;
+    padding-left: 20px;
   }
 
   .menu li {
@@ -168,7 +169,6 @@ header {
     padding: 12px 20px;
     display: block;
   }
- 
 
   .submenu.open {
     display: block;
@@ -184,6 +184,8 @@ header {
     margin-left: 8px;
     font-size: 14px;
     color: #fff;
+    float: right;
+    padding-right: 10px;
   }
 }
 
