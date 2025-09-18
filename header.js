@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Handle ALL submenu toggles — including nested ones
+  // Handle ALL submenu toggles — including deeply nested ones
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
   submenuToggles.forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault(); // Prevent link navigation on toggle click
+      e.stopPropagation(); // Prevent event from bubbling up to parent links
+      e.preventDefault();  // Prevent default link behavior
       const submenu = btn.nextElementSibling;
       if (submenu && submenu.classList.contains("submenu")) {
         submenu.classList.toggle("open");
@@ -24,9 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // On mobile: close menu when clicking any link
   document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
-        menu.classList.remove('active');
+        // Only close if clicked link is NOT a submenu toggle
+        if (!e.target.classList.contains('submenu-toggle')) {
+          menu.classList.remove('active');
+        }
       }
     });
   });
