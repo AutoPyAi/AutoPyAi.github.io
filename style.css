@@ -543,24 +543,6 @@ main {
   margin-top: 8px;
 }
 
-
-/*====== github link ====== */
-
-.submenu .github-link {
-  color: #333 !important;
-  padding: 10px 15px !important;
-  display: block !important;
-  text-decoration: none !important;
-  border-radius: 4px !important;
-  transition: background 0.2s !important;
-}
-
-.submenu .github-link:hover {
-  background: #f0f0f0 !important;
-  color: #3498db !important;
-}
-
-
 /* ====== SCREENSHOT STYLING ====== */
 .screenshot-container {
   text-align: center;
@@ -586,3 +568,4 @@ main {
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
+
