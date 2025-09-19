@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG Basic — AI-Powered Document Intelligence | AutoPyAI</title>
+  <title>Chatbot Basic — Learn AI with Python & Gemini | AutoPyAI</title>
   <link rel="stylesheet" href="style.css">
   <script src="header.js" defer></script>
   <style>
@@ -73,10 +73,10 @@
       text-align: center;
       margin: 4rem 0;
       padding: 2.5rem;
-      background: linear-gradient(135deg, #2c3e50, #34495e);
+      background: linear-gradient(135deg, #3498db, #2980b9);
       color: white;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+      box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
     }
 
     .buy-section h2 {
@@ -118,15 +118,7 @@
       max-width: 100%;
       border-radius: 10px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-
-    .footer-brand {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #eee;
-      color: #7f8c8d;
-      font-size: 0.9rem;
+      margin: 1rem auto;
     }
 
     .use-case {
@@ -141,11 +133,30 @@
       color: #2c3e50;
       margin-bottom: 0.5rem;
     }
+
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ffb300;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 1.05rem;
+      color: #5d4037;
+    }
+
+    .footer-brand {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
+  <!-- ✅ EMBEDDED HEADER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -171,7 +182,6 @@
                 <li><a href="rag-advanced.html">RAG Advanced</a></li>
               </ul>
             </li>
-         <!--
             <li>
               <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
               <ul class="submenu">
@@ -183,11 +193,16 @@
               <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
               <ul class="submenu">
                 <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
-                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
+                <li>
+                  <a href="https://github.com/AutoPyAi/simple-chatbot" target="_blank" class="github-link">
+                    <span>🌐 </span>View Source Code on GitHub
+                  </a>
+                </li>
+                <li><a href="chatbot-pro.html">Chatbot Pro (GUI)</a></li>
               </ul>
             </li>
           </ul>
-        </li>  -->
+        </li>
         <li>
           <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
           <ul class="submenu">
@@ -204,46 +219,66 @@
 
   <main>
     <h1>Chatbot Basic</h1>
-    <p class="hero-subhead">Transform your documents into an intelligent assistant — no cloud, no API, just Python.</p>
-    <b>Comming Soon....</b> 
-<!--
+    <p class="hero-subhead">Learn how to build your first AI chatbot — using Google Gemini 2.0 Flash, simple Python, and zero complexity.</p>
+
     <div class="use-case">
       <h3>Perfect For:</h3>
-      <p>Researchers, students, analysts, and small businesses who need to extract insights from PDFs, Word files, or Excel spreadsheets — without writing code.</p>
+      <p>Students, beginners, and self-learners who want to understand how AI chatbots work — step by step — without overwhelming libraries or cloud dependencies.</p>
     </div>
 
-    <h2>Key Features</h2>
+    <h2>Why This Tool?</h2>
     <ul class="feature-list">
-      <li>Connects to your local document folder — no uploads, no privacy risk</li>
-      <li>Uses advanced RAG (Retrieval-Augmented Generation) to answer questions based on your files</li>
-      <li>Supports PDF, DOCX, TXT, XLSX — all major formats</li>
-      <li>Runs offline on Windows, Mac, or Linux — no internet required after setup</li>
-      <li>Integrates with any LLM (OpenAI, Ollama, Groq, etc.) — choose your own model</li>
-      <li>Exports answers to text or CSV for reporting</li>
+      <li>✅ Built for learning — clean, readable code with comments</li>
+      <li>✅ Uses only standard Python + Google’s Gemini API — no complex frameworks</li>
+      <li>✅ Terminal-based — run it right in VS Code’s integrated terminal</li>
+      <li>✅ Requires only one API key — easy to set up with `.env.example`</li>
+      <li>✅ Lightweight — runs instantly on any laptop</li>
+      <li>✅ Perfect for school projects, coding bootcamps, or personal study</li>
     </ul>
+
+    <div class="note">
+      💡 <strong>Note:</strong> This tool requires an internet connection to use Google’s Gemini API.  
+      It is designed as a <em>learning tool</em>, not a private offline assistant.  
+      You’ll learn how APIs work — and how to safely manage keys with environment variables.
+    </div>
 
     <h2>How It Works</h2>
     <ol class="feature-list">
-      <li>Download and unzip the tool</li>
-      <li>Place your documents in the <code>docs/</code> folder</li>
-      <li>Run <code>rag_basic.py</code></li>
-      <li>Type your question — get instant, accurate answers</li>
+      <li>Install Python (3.9+)</li>
+      <li>Install required packages: <code>pip install python-dotenv google-generativeai</code></li>
+      <li>Create a file named <code>.env</code> and add your Gemini API key:  
+        <code>GOOGLE_API_KEY=your_key_here</code></li>
+      <li>Run: <code>python chatbot_basic.py</code></li>
+      <li>Type messages — get instant AI responses in your terminal!</li>
     </ol>
 
+    <h2>What You’ll Learn</h2>
+    <ul class="feature-list">
+      <li>How to load API keys securely using <code>.env</code></li>
+      <li>How to send prompts to an LLM via REST API</li>
+      <li>How to handle responses and format them cleanly</li>
+      <li>How to build a looped conversation (chat history)</li>
+      <li>How to structure real-world Python projects</li>
+    </ul>
+
     <div class="screenshot-container">
-      <img src="rag-screenshot.png" alt="RAG Basic Interface - Ask Questions to Your Documents" width="700">
-      <p class="small" style="margin-top: 1rem; color: #7f8c8d;">*Example interface — your actual tool will look similar</p>
+      <img src="chatbot-terminal-Q-A.png" alt="Terminal output showing Chatbot Basic running in VS Code" width="700">
+      <p class="small" style="margin-top: 1rem; color: #7f8c8d;">*Terminal view — shows real user input and AI response</p>
+    </div>
+
+    <div class="screenshot-container">
+      <img src="chatbot-vscode.png" alt="VS Code editor showing chatbot_basic.py code with comments" width="700">
+      <p class="small" style="margin-top: 1rem; color: #7f8c8d;">*Code view — clean, commented, beginner-friendly Python</p>
     </div>
 
     <div class="buy-section">
-      <h2>Ready to Turn Documents Into AI Answers?</h2>
-      <p>One-time payment. Lifetime updates. No subscriptions. Zero cloud dependency.</p>
-      <a href="https://payoneer.com/your-link" class="buy-btn">Buy Now — $39 One-Time</a>
+      <h2>Ready to Start Learning AI?</h2>
+      <p>One-time payment. Lifetime updates. Get the full source code, setup guide, and future upgrades.</p>
+      <a href="payment.html" class="buy-btn">Buy Now — $19</a>
     </div>
--->
 
     <div class="footer-brand">
-      © 2025 RAG Basic — Made by Suhail Asghar. All rights reserved.
+      © 2025 Chatbot Basic — Made by Suhail Asghar. All rights reserved.
     </div>
   </main>
 
