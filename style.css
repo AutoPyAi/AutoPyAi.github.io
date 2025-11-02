@@ -543,3 +543,15 @@ main {
   margin-top: 8px;
 }
 
+*========Formsubmission message note styling======== */
+.form-note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #3498db;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  border-radius: 0 8px 8px 0;
+}
+
+
