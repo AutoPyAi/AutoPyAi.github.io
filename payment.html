@@ -173,35 +173,35 @@
     </div>
 
     <div class="payment-form">
-    <h2>Need Help? Send Us a Message</h2>
-    <form action="https://formspree.io/f/xjkpjopz" method="POST">
- 		     <!-- Hidden: Redirect after submit -->
-  		   <input type="hidden" name="_next" value="https://autopyai.github.io/thank-you.html"/>
+     <h2>Need Help? Send Us a Message</h2>
+     <form action="https://formsubmit.co/autopyai@gmail.com" method="POST">
+  		<!-- Redirect to your thank-you page -->
+ 		 <input type="hidden" name="_redirect" value="https://autopyai.github.io/thank-you.html"/>
 
- 		     <!-- Hidden: Email subject -->
- 		     <input type="hidden" name="_subject" value="AutoPyAI Purchase Inquiry"/>
-	
-  		   <!-- Honeypot for spam bots (leave empty!) -->
- 		     <input type="text" name="_gotcha" style="display:none"/>
+ 		 <!-- Email subject -->
+ 		 <input type="hidden" name="_subject" value="AutoPyAI Purchase Inquiry"/>
 
- 	 	      <div class="form-group">
-    		     <label for="name">Your Name</label>
-   		  	   <input type="text" id="name" name="name" required placeholder="Enter your full name">
-  		    </div>
+  		<!-- Honeypot spam protection -->
+ 		 <input type="text" name="_honey" style="display:none"/>
 
-  		    <div class="form-group">
-    			    <label for="email">Your Email</label>
-    			    <input type="email" id="email" name="email" required placeholder="you@example.com">
-  		    </div>
+ 		 <!-- Your fields -->
+ 		 <div class="form-group">
+   			 <label for="name">Your Name</label>
+   			 <input type="text" id="name" name="name" required placeholder="Enter your full name">
+ 		 </div>
 
-  		    <div class="form-group">
-   			     <label for="message">Message</label>
-    		  	  <textarea id="message" name="message" rows="5" placeholder="Tell us which tool you'd like to buy..." required></textarea>
-  		    </div>
+  		<div class="form-group">
+    			<label for="email">Your Email</label>
+    			<input type="email" id="email" name="email" required placeholder="you@example.com">
+  		</div>
 
-  		    <button type="submit" class="submit-btn">Send Message</button>
-	   </form>  
-      
+  		<div class="form-group">
+   			 <label for="message">Message</label>
+   			 <textarea id="message" name="message" rows="5" placeholder="Tell us which tool you'd like to buy..." required></textarea>
+ 		 </div>
+
+ 		 <button type="submit" class="submit-btn">Send Message</button>
+	  </form>      
     </div>
 
     <div class="footer-brand">
@@ -212,6 +212,7 @@
 </body>
 
 </html>
+
 
 
 
