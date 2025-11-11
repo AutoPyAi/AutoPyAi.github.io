@@ -3,122 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Software Catalog — AutoPyAI</title>
+  <title>Software Suite — AutoPyAI</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      background: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+
     main {
-      max-width: 1400px;
+      display: flex;
+      max-width: 1600px;
       margin: 2rem auto;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
+      gap: 2rem;
+      font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
-    .page-header {
+    /* ====== SIDEBAR ====== */
+    .sidebar {
+      width: 260px;
+      background: #4f46e5; /* indigo-600 — brand-aligned */
+      color: white;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      height: fit-content;
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+      position: sticky;
+      top: 2rem;
+    }
+
+    .sidebar h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1.6rem;
+      font-weight: 700;
       text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .page-header h1 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .page-header p {
-      color: var(--text-light);
-      font-size: 1.2rem;
-    }
-
-    .controls {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    #search {
-      flex: 1;
-      max-width: 500px;
-      padding: 12px 16px;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      font-size: 1rem;
-      outline: none;
-      transition: border 0.3s;
-    }
-
-    #search:focus {
-      border-color: var(--secondary);
-      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
-    }
-
-    .category-filters {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
+      letter-spacing: -0.02em;
     }
 
     .filter-btn {
-      padding: 8px 16px;
-      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 11px 16px;
+      background: transparent;
+      color: white;
       border: none;
-      border-radius: 20px;
-      font-size: 0.95rem;
+      border-radius: 12px;
+      font-size: 1.02rem;
+      font-weight: 600;
+      text-align: left;
       cursor: pointer;
+      margin-bottom: 0.9rem;
       transition: all 0.2s;
+      gap: 12px;
     }
 
-    .filter-btn.active,
     .filter-btn:hover {
-      background: var(--primary);
-      color: white;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .filter-btn.active {
+      background: white;
+      color: #4f46e5;
+    }
+
+    .filter-btn.active:hover {
+      background: #f0f0ff;
+    }
+
+    /* ====== CONTENT AREA ====== */
+    .content {
+      flex: 1;
+    }
+
+    .page-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .page-header h1 {
+      font-size: 1.85rem;
+      color: #1e293b;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+
+    .search-container {
+      text-align: right;
+      margin-bottom: 1.8rem;
+    }
+
+    #search {
+      width: 320px;
+      max-width: 100%;
+      padding: 10px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 0.97rem;
+      outline: none;
+      transition: border 0.3s, box-shadow 0.2s;
+    }
+
+    #search:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
     }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.8rem;
     }
 
     .project-card {
       background: white;
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 6px 16px -4px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
       border: 1px solid #e2e8f0;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px -4px rgba(0,0,0,0.1);
     }
 
     .card-header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, #4f46e5, #7e22ce);
       color: white;
-      padding: 1.2rem 1.5rem;
+      padding: 1rem 1.4rem;
     }
 
     .card-header h3 {
-      font-size: 1.4rem;
+      font-size: 1.15rem;
       margin: 0;
+      font-weight: 600;
     }
 
     .card-category {
-      font-size: 0.85rem;
-      opacity: 0.9;
+      font-size: 0.82rem;
+      opacity: 0.92;
       margin-top: 0.3rem;
     }
 
     .card-body {
-      padding: 1.5rem;
+      padding: 1.4rem;
     }
 
     .card-body p {
       color: #475569;
       line-height: 1.6;
+      font-size: 0.96rem;
       margin-bottom: 1.2rem;
-      font-size: 0.95rem;
     }
 
     .card-actions {
@@ -129,39 +172,50 @@
 
     .card-link, .github-link {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 7px 14px;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      transition: background 0.2s;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      transition: all 0.2s;
     }
 
     .card-link {
-      background: #f1f5f9;
-      color: var(--primary);
+      background: #eef2ff;
+      color: #4f46e5;
     }
 
     .card-link:hover {
-      background: #e0e7ff;
+      background: #dbeafe;
     }
 
     .github-link {
-      background: #f0f0f0;
-      color: #333;
+      background: #f1f5f9;
+      color: #334155;
     }
 
     .github-link:hover {
-      background: #e2e2e2;
-      color: var(--primary);
+      background: #e2e8f0;
+      color: #4f46e5;
     }
 
-    @media (max-width: 768px) {
-      .controls {
+    .projects-grid p {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    @media (max-width: 900px) {
+      main {
         flex-direction: column;
       }
-      #search {
-        max-width: 100%;
+      .sidebar {
+        position: static;
+        width: 100%;
+      }
+      .search-container {
+        text-align: left;
       }
     }
   </style>
@@ -189,23 +243,24 @@
   </header>
 
   <main>
-    <div class="page-header">
-      <h1>Our Software Suite</h1>
-      <p>Professional tools to automate your workflow — all offline, private, and one-click ready.</p>
-    </div>
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <!-- Buttons will be injected by JS with icons + counts -->
+      <div id="sidebarButtons"></div>
+    </aside>
 
-    <div class="controls">
-      <input type="text" id="search" placeholder="Search projects (e.g., YouTube, Chatbot, Disk Cleaner)..." />
-      <div class="category-filters" id="categoryFilters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="automation">Automation</button>
-        <button class="filter-btn" data-category="rag">RAG System</button>
-        <button class="filter-btn" data-category="agentic">Agentic AI</button>
-        <button class="filter-btn" data-category="chatbot">Chatbot</button>
+    <section class="content">
+      <div class="page-header">
+        <h1>Our Software Suite</h1>
+        <p>Professional, offline, and privacy-first tools for productivity.</p>
       </div>
-    </div>
 
-    <div class="projects-grid" id="projectsGrid"></div>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search tools (e.g., YouTube, Disk Cleaner)..." />
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
   </main>
 
   <script>
@@ -279,6 +334,14 @@
       }
     ];
 
+    const categoryConfig = {
+      all: { icon: "📦", name: "All Software" },
+      automation: { icon: "⚡", name: "Automation" },
+      rag: { icon: "🧠", name: "RAG System" },
+      agentic: { icon: "🤖", name: "Agentic AI" },
+      chatbot: { icon: "💬", name: "Chatbot" }
+    };
+
     const categoryNames = {
       automation: "Automation",
       rag: "RAG System",
@@ -286,11 +349,38 @@
       chatbot: "Chatbot"
     };
 
+    // Precompute counts
+    const counts = { all: projects.length, automation: 0, rag: 0, agentic: 0, chatbot: 0 };
+    projects.forEach(p => {
+      counts[p.category]++;
+    });
+
     const grid = document.getElementById('projectsGrid');
     const searchInput = document.getElementById('search');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const sidebarButtons = document.getElementById('sidebarButtons');
 
     let currentCategory = 'all';
+
+    function renderSidebar() {
+      const categories = ['all', 'automation', 'rag', 'agentic', 'chatbot'];
+      sidebarButtons.innerHTML = '';
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = `filter-btn ${cat === currentCategory ? 'active' : ''}`;
+        btn.dataset.category = cat;
+        btn.innerHTML = `
+          <span>${categoryConfig[cat].icon}</span>
+          <span>${categoryConfig[cat].name} (${counts[cat]})</span>
+        `;
+        btn.addEventListener('click', () => {
+          currentCategory = cat;
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderProjects();
+        });
+        sidebarButtons.appendChild(btn);
+      });
+    }
 
     function renderProjects() {
       grid.innerHTML = '';
@@ -303,16 +393,14 @@
       });
 
       if (filtered.length === 0) {
-        grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-light);">No projects found.</p>`;
+        grid.innerHTML = `<p>No tools found. Try a different search or category.</p>`;
         return;
       }
 
       filtered.forEach(p => {
-        let actions = `<a href="${p.link}" class="card-link">View Details →</a>`;
-        
-        // Only add GitHub link for Chatbot Basic
+        let actions = `<a href="${p.link}" class="card-link">Details →</a>`;
         if (p.github) {
-          actions += `<a href="${p.github}" target="_blank" class="github-link">🌐 View Source</a>`;
+          actions += `<a href="${p.github}" target="_blank" class="github-link">🌐 Source</a>`;
         }
 
         const card = document.createElement('div');
@@ -334,16 +422,7 @@
     }
 
     searchInput.addEventListener('input', renderProjects);
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentCategory = btn.dataset.category;
-        renderProjects();
-      });
-    });
-
+    renderSidebar();
     renderProjects();
   </script>
 
