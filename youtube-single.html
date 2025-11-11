@@ -14,16 +14,16 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .hero {
+   .hero {
       text-align: center;
       padding: 4rem 0;
-      background: linear-gradient(135deg, #3498db, #2980b9);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
       margin-bottom: 3rem;
     }
-
+    
     .hero h1 {
       font-size: 2.8rem;
       margin-bottom: 1rem;
@@ -68,7 +68,7 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      border-left: 4px solid #3498db;
+      border-left: 4px solid var(--primary);
       transition: transform 0.3s;
     }
 
@@ -76,15 +76,56 @@
       transform: translateY(-8px);
     }
 
-    .feature-card h3 {
-      color: #2c3e50;
+   .feature-card h3 {
+      color: var(--text);
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
 
-    .feature-card p {
-      color: #555;
+   .feature-card p {
+      color: var(--text-light);
       line-height: 1.7;
+    }
+
+   .buy-section {
+      text-align: center;
+      margin: 4rem 0;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    }
+
+   .buy-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+   .buy-section p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+   .buy-btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    }
+
+   .buy-btn:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
     }
 
     .footer-brand {
@@ -175,6 +216,7 @@
 </body>
 
 </html>
+
 
 
 
