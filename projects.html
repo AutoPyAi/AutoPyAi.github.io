@@ -121,19 +121,39 @@
       font-size: 0.95rem;
     }
 
-    .card-link {
+    .card-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .card-link, .github-link {
       display: inline-block;
-      background: #f1f5f9;
-      color: var(--primary);
       padding: 8px 16px;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
       transition: background 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .card-link {
+      background: #f1f5f9;
+      color: var(--primary);
     }
 
     .card-link:hover {
       background: #e0e7ff;
+    }
+
+    .github-link {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    .github-link:hover {
+      background: #e2e2e2;
+      color: var(--primary);
     }
 
     @media (max-width: 768px) {
@@ -236,7 +256,8 @@
         name: "Chatbot Basic",
         category: "chatbot",
         description: "Simple local chatbot for FAQs and internal documentation.",
-        link: "chatbot-basic.html"
+        link: "chatbot-basic.html",
+        github: "https://github.com/AutoPyAi/simple-chatbot"
       },
       {
         name: "Chatbot Pro",
@@ -281,6 +302,13 @@
       }
 
       filtered.forEach(p => {
+        let actions = `<a href="${p.link}" class="card-link">View Details →</a>`;
+        
+        // Only add GitHub link for Chatbot Basic
+        if (p.github) {
+          actions += `<a href="${p.github}" target="_blank" class="github-link">🌐 View Source</a>`;
+        }
+
         const card = document.createElement('div');
         card.className = 'project-card';
         card.innerHTML = `
@@ -290,7 +318,9 @@
           </div>
           <div class="card-body">
             <p>${p.description}</p>
-            <a href="${p.link}" class="card-link">View Details →</a>
+            <div class="card-actions">
+              ${actions}
+            </div>
           </div>
         `;
         grid.appendChild(card);
