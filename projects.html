@@ -10,39 +10,31 @@
       background: #f9fbfd;
       margin: 0;
       padding: 0;
-      min-height: 100vh;
     }
 
     main {
       display: flex;
       max-width: 1600px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      gap: 2rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 1.8rem;
       font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
-    /* ====== FULL-HEIGHT SIDEBAR ====== */
+    /* ====== SIDEBAR — Ocean Blue, Narrower, Lower Start ====== */
     .sidebar {
-      width: 250px;
-      background: #2563eb; /* professional blue */
+      width: 200px;
+      background: #0ea5e9; /* ocean blue */
       color: white;
-      border-radius: 16px;
-      padding: 2rem 1.5rem;
-      /* Full vertical coverage */
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
-      position: sticky;
-      top: 80px; /* accounts for header height */
-      bottom: 2rem;
+      border-radius: 14px;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
       align-self: flex-start;
-      min-height: calc(100vh - 120px); /* header + footer spacing */
     }
 
     .sidebar h2 {
-      font-size: 1.15rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
       font-weight: 700;
       text-align: center;
       letter-spacing: -0.02em;
@@ -52,31 +44,27 @@
       display: flex;
       align-items: center;
       width: 100%;
-      padding: 10px 16px;
+      padding: 8px 12px;
       background: transparent;
       color: white;
       border: none;
-      border-radius: 10px;
-      font-size: 1rem; /* normalized */
+      border-radius: 8px;
+      font-size: 0.92rem; /* smaller */
       font-weight: 600;
       text-align: left;
       cursor: pointer;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.7rem;
       transition: all 0.2s;
-      gap: 12px;
+      gap: 10px;
     }
 
     .filter-btn:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.15);
     }
 
     .filter-btn.active {
       background: white;
-      color: #2563eb;
-    }
-
-    .filter-btn.active:hover {
-      background: #f0f4ff;
+      color: #0ea5e9;
     }
 
     /* ====== CONTENT AREA ====== */
@@ -85,114 +73,114 @@
     }
 
     .page-header {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.4rem;
     }
 
     .page-header h1 {
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       color: #1e293b;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
       font-weight: 700;
     }
 
     .page-header p {
       color: #64748b;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
     }
 
     .search-container {
       text-align: right;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.5rem;
     }
 
     #search {
-      width: 300px;
+      width: 280px;
       max-width: 100%;
-      padding: 8px 14px;
+      padding: 7px 12px;
       border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      font-size: 0.95rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
       outline: none;
       transition: border 0.3s, box-shadow 0.2s;
     }
 
     #search:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+      border-color: #0ea5e9;
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
     }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.6rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 3 per row */
+      gap: 1.4rem;
     }
 
     .project-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
       border: 1px solid #e2e8f0;
     }
 
     .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.07);
     }
 
     .card-header {
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
       color: white;
-      padding: 0.9rem 1.2rem;
+      padding: 0.8rem 1rem;
     }
 
     .card-header h3 {
-      font-size: 1.05rem;
+      font-size: 1rem;
       margin: 0;
       font-weight: 600;
     }
 
     .card-category {
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       opacity: 0.9;
-      margin-top: 0.25rem;
+      margin-top: 0.2rem;
     }
 
     .card-body {
-      padding: 1.2rem;
+      padding: 1rem;
     }
 
     .card-body p {
       color: #475569;
-      line-height: 1.55;
-      font-size: 0.92rem; /* reduced */
-      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 0.88rem;
+      margin-bottom: 0.9rem;
     }
 
     .card-actions {
       display: flex;
-      gap: 0.65rem;
+      gap: 0.55rem;
       flex-wrap: wrap;
     }
 
     .card-link, .github-link {
       display: inline-block;
-      padding: 6px 12px;
-      border-radius: 6px;
+      padding: 5px 10px;
+      border-radius: 5px;
       font-weight: 600;
       text-decoration: none;
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       transition: all 0.2s;
     }
 
     .card-link {
-      background: #dbeafe;
-      color: #1d4ed8;
+      background: #ecfeff;
+      color: #0891b2;
     }
 
     .card-link:hover {
-      background: #bfdbfe;
+      background: #cffafe;
     }
 
     .github-link {
@@ -202,27 +190,23 @@
 
     .github-link:hover {
       background: #e2e8f0;
-      color: #2563eb;
+      color: #0ea5e9;
     }
 
     .projects-grid p {
       grid-column: 1 / -1;
       text-align: center;
       color: #64748b;
-      font-style: italic;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
       main {
         flex-direction: column;
-        padding: 2rem 1rem 1rem;
       }
       .sidebar {
-        position: static;
         width: 100%;
-        min-height: auto;
-        top: 0;
+        margin-bottom: 1.5rem;
       }
       .search-container {
         text-align: left;
@@ -253,22 +237,25 @@
   </header>
 
   <main>
-    <aside class="sidebar">
-      <h2>Categories</h2>
-      <div id="sidebarButtons"></div>
-    </aside>
-
     <section class="content">
       <div class="page-header">
         <h1>Our Software Suite</h1>
         <p>Professional, offline, and privacy-first tools for productivity.</p>
       </div>
 
-      <div class="search-container">
-        <input type="text" id="search" placeholder="Search tools (e.g., YouTube, Disk Cleaner)..." />
-      </div>
+      <div style="display: flex; gap: 1.8rem; flex-wrap: wrap;">
+        <aside class="sidebar">
+          <h2>Categories</h2>
+          <div id="sidebarButtons"></div>
+        </aside>
 
-      <div class="projects-grid" id="projectsGrid"></div>
+        <div style="flex: 1; min-width: 300px;">
+          <div class="search-container">
+            <input type="text" id="search" placeholder="Search tools (e.g., YouTube, Disk Cleaner)..." />
+          </div>
+          <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+      </div>
     </section>
   </main>
 
