@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
   submenuToggles.forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent event from bubbling up
-      e.preventDefault();  // Prevent link navigation
+      e.stopPropagation();
+      e.preventDefault();
       
       const submenu = btn.nextElementSibling;
       if (submenu && submenu.classList.contains("submenu")) {
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
-        // Only close if clicked link is NOT a submenu toggle or inside a submenu
         if (!e.target.closest('.submenu') && !e.target.classList.contains('submenu-toggle')) {
           menu.classList.remove('active');
         }
