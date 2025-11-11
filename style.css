@@ -1,13 +1,16 @@
-/* ====== :root for modern colors ====== */
+/* ====== :root — Centralized Theme (Easy to Update Later) ====== */
 :root {
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --secondary: #8b5cf6;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --bg: #fafbff;
+  --primary: #2563eb;        /* main blue */
+  --primary-dark: #1d4ed8;   /* darker blue for hover/gradients */
+  --primary-light: #3b82f6;  /* lighter blue for accents */
+  --secondary: #0ea5e9;      /* complementary teal for buttons if needed */
+  --text: #1e293b;           /* dark gray for body text */
+  --text-light: #64748b;     /* medium gray for descriptions */
+  --bg: #f9fbfd;             /* soft light background */
   --card-bg: white;
   --border: #e2e8f0;
+  --success: #10b981;
+  --danger: #ef4444;
 }
 
 /* ====== RESET ====== */
@@ -78,7 +81,7 @@ header {
   background: var(--primary);
 }
 
-/* ====== DROPDOWN MENUS (only for Feedback now) ====== */
+/* ====== DROPDOWN MENUS (Feedback only) ====== */
 .submenu {
   list-style: none;
   position: absolute;
@@ -111,7 +114,6 @@ header {
   background: var(--primary);
 }
 
-/* Desktop hover */
 .menu > li:hover > .submenu {
   display: flex;
   flex-direction: column;
@@ -203,43 +205,82 @@ main {
   font-size: 0.9rem;
 }
 
-/* ====== HERO & FEATURES — colors updated via inline CSS in pages ====== */
-
-/* ====== FORMS, PAYMENT, TESTIMONIALS — keep as-is but respect new vars */
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
+/* ====== HERO & BUTTONS ====== */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.submit-btn {
+.hero-blue {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+.hero-blue h1,
+.hero-blue p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-dark {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.cta-button,
+.submit-btn,
+.buy-btn {
   display: inline-block;
-  background: var(--secondary);
+  background: var(--primary);
   color: white;
   padding: 16px 32px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s;
-  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-.submit-btn:hover {
-  background: #7c3aed;
+.cta-button:hover,
+.submit-btn:hover,
+.buy-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
+/* ====== FEATURE & PAYMENT CARDS ====== */
 .feature-card,
 .payment-card,
 .testimonial-card,
 .contact-info {
-  background: white;
+  background: var(--card-bg);
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover,
+.payment-card:hover {
+  transform: translateY(-8px);
 }
 
 .feature-card {
@@ -258,23 +299,63 @@ main {
   border-left: 4px solid var(--primary);
 }
 
-/* ====== OTHER STYLES — unchanged but safe ====== */
+.feature-card h3,
+.payment-card h3,
+.contact-info h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-card p,
+.payment-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ====== GRIDS ====== */
+.features,
+.payment-methods,
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+/* ====== FORMS ====== */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* ====== HOW IT WORKS & CONTACT ====== */
 .how-it-works {
   background: #f8f9fa;
   padding: 2.5rem;
   border-radius: 12px;
   margin: 4rem 0;
-  border-left: 4px solid var(--secondary);
+  border-left: 4px solid var(--primary);
 }
 
 .how-it-works h2,
-.contact-info h2,
-.testimonial-author h4 {
+.contact-info h2 {
   color: var(--text);
+  margin-bottom: 1.5rem;
 }
 
-.testimonial-text {
-  color: var(--text);
+/* ====== SCREENSHOTS ====== */
+.screenshot {
+  max-width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin: 1.5rem auto;
 }
 
 .small {
@@ -283,10 +364,19 @@ main {
   margin-top: 0.5rem;
 }
 
-.screenshot {
-  max-width: 100%;
-  max-height: 600px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  margin: 1.5rem auto;
+/* ====== GITHUB LINK (from project pages) ====== */
+.submenu .github-link,
+.github-link {
+  color: #333 !important;
+  padding: 10px 15px !important;
+  display: block !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  transition: background 0.2s !important;
+}
+
+.submenu .github-link:hover,
+.github-link:hover {
+  background: #f0f0f0 !important;
+  color: var(--primary) !important;
 }
