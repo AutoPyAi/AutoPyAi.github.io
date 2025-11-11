@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Catalog — AutoPyAI</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      color: var(--text-light);
+      font-size: 1.2rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    #search {
+      flex: 1;
+      max-width: 500px;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    #search:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+    }
+
+    .category-filters {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      background: #f1f5f9;
+      border: none;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .card-header h3 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .card-category {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      margin-top: 0.3rem;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-body p {
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .card-link {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .card-link:hover {
+      background: #e0e7ff;
+    }
+
+    @media (max-width: 768px) {
+      .controls {
+        flex-direction: column;
+      }
+      #search {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">AutoPyAI</a></div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Software</a></li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Our Software Suite</h1>
+      <p>Professional tools to automate your workflow — all offline, private, and one-click ready.</p>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search projects (e.g., YouTube, Chatbot, Disk Cleaner)..." />
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="automation">Automation</button>
+        <button class="filter-btn" data-category="rag">RAG System</button>
+        <button class="filter-btn" data-category="agentic">Agentic AI</button>
+        <button class="filter-btn" data-category="chatbot">Chatbot</button>
+      </div>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+  </main>
+
+  <script>
+    const projects = [
+      {
+        name: "YouTube Multi Channels Data Extractor Pro",
+        category: "automation",
+        description: "Extract data from multiple YouTube channels in one go. Export to CSV/Excel.",
+        link: "youtube-multi.html"
+      },
+      {
+        name: "YouTube Single Channel Data Extractor Pro",
+        category: "automation",
+        description: "Extract videos, stats, and metadata from any single YouTube channel.",
+        link: "youtube-single.html"
+      },
+      {
+        name: "Auto Disk Cleaner",
+        category: "automation",
+        description: "Automatically clean temp files, cache, and junk to free up disk space.",
+        link: "auto-disk-cleaner.html"
+      },
+      {
+        name: "RAG Basic",
+        category: "rag",
+        description: "Local Retrieval-Augmented Generation system for private document Q&A.",
+        link: "rag-basic.html"
+      },
+      {
+        name: "RAG Advanced",
+        category: "rag",
+        description: "Enhanced RAG with multi-document support, metadata filtering, and UI.",
+        link: "rag-advanced.html"
+      },
+      {
+        name: "Agentic Basic",
+        category: "agentic",
+        description: "AI agents that perform simple automated tasks based on your goals.",
+        link: "agentic-basic.html"
+      },
+      {
+        name: "Agentic Pro",
+        category: "agentic",
+        description: "Multi-agent collaboration with memory, tools, and error recovery.",
+        link: "agentic-pro.html"
+      },
+      {
+        name: "Chatbot Basic",
+        category: "chatbot",
+        description: "Simple local chatbot for FAQs and internal documentation.",
+        link: "chatbot-basic.html"
+      },
+      {
+        name: "Chatbot Pro",
+        category: "chatbot",
+        description: "Advanced conversational AI with memory, file upload, and voice support.",
+        link: "chatbot-pro.html"
+      },
+      {
+        name: "KidChat AI",
+        category: "chatbot",
+        description: "Child-friendly educational chatbot for students aged 5–12. Safe & private.",
+        link: "kidchat-ai.html"
+      }
+    ];
+
+    const categoryNames = {
+      automation: "Automation",
+      rag: "RAG System",
+      agentic: "Agentic AI",
+      chatbot: "Chatbot"
+    };
+
+    const grid = document.getElementById('projectsGrid');
+    const searchInput = document.getElementById('search');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    let currentCategory = 'all';
+
+    function renderProjects() {
+      grid.innerHTML = '';
+      const query = searchInput.value.toLowerCase();
+
+      const filtered = projects.filter(p => {
+        const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchesSearch = p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-light);">No projects found.</p>`;
+        return;
+      }
+
+      filtered.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+          <div class="card-header">
+            <h3>${p.name}</h3>
+            <div class="card-category">${categoryNames[p.category]}</div>
+          </div>
+          <div class="card-body">
+            <p>${p.description}</p>
+            <a href="${p.link}" class="card-link">View Details →</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    searchInput.addEventListener('input', renderProjects);
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.dataset.category;
+        renderProjects();
+      });
+    });
+
+    renderProjects();
+  </script>
+
+  <script src="header.js" defer></script>
+</body>
+</html>
