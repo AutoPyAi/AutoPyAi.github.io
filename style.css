@@ -1,19 +1,17 @@
-/* ====== :root — Centralized Theme (Easy to Update Later) ====== */
+/* ====== :root — Centralized Theme (Ready for Global Updates Later) ====== */
 :root {
-  --primary: #2563eb;        /* main blue */
-  --primary-dark: #1d4ed8;   /* darker blue for hover/gradients */
-  --primary-light: #3b82f6;  /* lighter blue for accents */
-  --secondary: #0ea5e9;      /* complementary teal for buttons if needed */
-  --text: #1e293b;           /* dark gray for body text */
-  --text-light: #64748b;     /* medium gray for descriptions */
-  --bg: #f9fbfd;             /* soft light background */
+  --primary: #2563eb;        /* main blue (used on other pages) */
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #0ea5e9;      /* ocean blue — reserved for software page */
+  --text: #1e293b;
+  --text-light: #64748b;
+  --bg: #f9fbfd;
   --card-bg: white;
   --border: #e2e8f0;
-  --success: #10b981;
-  --danger: #ef4444;
 }
 
-/* ====== RESET ====== */
+/* ====== RESET & BASE STYLES ====== */
 * {
   margin: 0;
   padding: 0;
@@ -81,7 +79,7 @@ header {
   background: var(--primary);
 }
 
-/* ====== DROPDOWN MENUS (Feedback only) ====== */
+/* Dropdowns (Feedback only) */
 .submenu {
   list-style: none;
   position: absolute;
@@ -95,10 +93,6 @@ header {
   z-index: 1000;
   margin-top: 0;
   padding: 0;
-}
-
-.submenu li {
-  position: relative;
 }
 
 .submenu a {
@@ -116,7 +110,6 @@ header {
 
 .menu > li:hover > .submenu {
   display: flex;
-  flex-direction: column;
 }
 
 /* Mobile menu */
@@ -129,62 +122,34 @@ header {
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
+  .menu-toggle { display: block; }
   .menu {
     display: none;
     flex-direction: column;
     background: #1a1a1a;
     width: 100%;
-    text-align: left;
     position: absolute;
     top: 60px;
     left: 0;
     padding: 1rem 0;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1);
   }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .submenu.open {
-    display: block;
-  }
-
+  .menu.active { display: flex; }
+  .submenu.open { display: block; }
   .submenu {
     position: static;
     display: none;
     background: #2a2a2a;
-    border-radius: 0;
     width: 100%;
-    margin: 0;
     padding-left: 20px;
   }
-
-  .menu li {
-    width: 100%;
-    border-top: 1px solid #333;
-  }
-
-  .menu li a {
-    padding: 12px 20px;
-    display: block;
-  }
-
-  nav ul.submenu li a {
-    padding-left: 30px;
-  }
-
+  .menu li a { padding: 12px 20px; }
+  nav ul.submenu li a { padding-left: 30px; }
   .submenu-toggle {
-    display: inline-block;
-    cursor: pointer;
+    float: right;
     margin-left: 8px;
     font-size: 14px;
     color: #fff;
-    float: right;
     padding-right: 10px;
   }
 }
@@ -205,7 +170,7 @@ main {
   font-size: 0.9rem;
 }
 
-/* ====== HERO & BUTTONS ====== */
+/* ====== HERO, BUTTONS, CARDS ====== */
 .hero {
   text-align: center;
   padding: 4rem 0;
@@ -219,15 +184,9 @@ main {
   color: white;
 }
 
-.hero-blue h1,
-.hero-blue p {
+.hero-blue h1, .hero-blue p {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-
-.hero-dark {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: white;
 }
 
 .hero h1 {
@@ -243,90 +202,57 @@ main {
   color: #555;
 }
 
-.cta-button,
-.submit-btn,
-.buy-btn {
+.cta-button, .submit-btn, .buy-btn {
   display: inline-block;
   background: var(--primary);
   color: white;
   padding: 16px 32px;
   font-size: 1.2rem;
   font-weight: bold;
-  text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s, transform 0.2s;
   margin-top: 1rem;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-.cta-button:hover,
-.submit-btn:hover,
-.buy-btn:hover {
+.cta-button:hover, .submit-btn:hover, .buy-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
-/* ====== FEATURE & PAYMENT CARDS ====== */
-.feature-card,
-.payment-card,
-.testimonial-card,
-.contact-info {
+.feature-card, .payment-card, .testimonial-card, .contact-info {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
+  border-left: 4px solid var(--primary);
 }
 
-.feature-card:hover,
-.payment-card:hover {
+.feature-card:hover, .payment-card:hover {
   transform: translateY(-8px);
 }
 
-.feature-card {
-  border-left: 4px solid var(--primary);
-}
-
-.payment-card {
-  border-left: 4px solid var(--primary);
-}
-
-.testimonial-card {
-  border-left: 4px solid var(--primary);
-}
-
-.contact-info {
-  border-left: 4px solid var(--primary);
-}
-
-.feature-card h3,
-.payment-card h3,
-.contact-info h2 {
+.feature-card h3, .payment-card h3 {
   color: var(--text);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-.feature-card p,
-.payment-card p {
+.feature-card p, .payment-card p {
   color: var(--text-light);
   line-height: 1.7;
 }
 
-/* ====== GRIDS ====== */
-.features,
-.payment-methods,
-.testimonial-grid {
+/* Grids */
+.features, .payment-methods, .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 4rem 0;
 }
 
-/* ====== FORMS ====== */
-.form-group input,
-.form-group select,
-.form-group textarea {
+/* Forms */
+.form-group input, .form-group select, .form-group textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--border);
@@ -334,22 +260,7 @@ main {
   font-size: 1rem;
 }
 
-/* ====== HOW IT WORKS & CONTACT ====== */
-.how-it-works {
-  background: #f8f9fa;
-  padding: 2.5rem;
-  border-radius: 12px;
-  margin: 4rem 0;
-  border-left: 4px solid var(--primary);
-}
-
-.how-it-works h2,
-.contact-info h2 {
-  color: var(--text);
-  margin-bottom: 1.5rem;
-}
-
-/* ====== SCREENSHOTS ====== */
+/* Screenshots */
 .screenshot {
   max-width: 100%;
   max-height: 600px;
@@ -364,8 +275,7 @@ main {
   margin-top: 0.5rem;
 }
 
-/* ====== GITHUB LINK (from project pages) ====== */
-.submenu .github-link,
+/* GitHub Link */
 .github-link {
   color: #333 !important;
   padding: 10px 15px !important;
@@ -375,8 +285,171 @@ main {
   transition: background 0.2s !important;
 }
 
-.submenu .github-link:hover,
 .github-link:hover {
   background: #f0f0f0 !important;
   color: var(--primary) !important;
+}
+
+/* 
+   ==================================================
+   SOFTWARE SUITE PAGE STYLES (projects.html)
+   Uses ocean blue: --secondary = #0ea5e9
+   ==================================================
+*/
+.software-main {
+  display: flex;
+  gap: 1.8rem;
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.software-sidebar {
+  width: 200px;
+  background: var(--secondary); /* ocean blue */
+  color: white;
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+  align-self: flex-start;
+}
+
+.software-sidebar h2 {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.software-sidebar .filter-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  gap: 10px;
+}
+
+.software-sidebar .filter-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.software-sidebar .filter-btn.active {
+  background: white;
+  color: var(--secondary);
+}
+
+.software-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.software-search {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.software-search input {
+  width: 280px;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.software-search input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.07);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--secondary), #0284c7);
+  color: white;
+  padding: 0.8rem 1rem;
+}
+
+.card-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.card-category {
+  font-size: 0.74rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body p {
+  color: #475569;
+  line-height: 1.5;
+  font-size: 0.88rem;
+  margin-bottom: 0.9rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.card-link, .github-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.84rem;
+  text-decoration: none;
+}
+
+.card-link {
+  background: #ecfeff;
+  color: #0891b2;
+}
+
+.card-link:hover {
+  background: #cffafe;
+}
+
+.github-link {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.github-link:hover {
+  background: #e2e8f0;
+  color: var(--secondary);
 }
