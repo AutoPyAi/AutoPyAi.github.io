@@ -18,10 +18,10 @@
     .hero {
       text-align: center;
       padding: 6rem 0;
-      background: linear-gradient(135deg, #3498db, #2980b9);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
       margin-bottom: 3rem;
     }
 
@@ -40,7 +40,7 @@
 
     .cta-button {
       display: inline-block;
-      background: #e74c3c;
+      background: var(--secondary);
       color: white;
       padding: 16px 32px;
       font-size: 1.2rem;
@@ -49,11 +49,11 @@
       border-radius: 8px;
       transition: background 0.3s, transform 0.2s;
       margin-top: 1rem;
-      box-shadow: 0 4px 12px rgba(231, 76, 54, 0.3);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
     }
 
     .cta-button:hover {
-      background: #c0392b;
+      background: #7c3aed;
       transform: translateY(-2px);
     }
 
@@ -69,7 +69,7 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      border-left: 4px solid #3498db;
+      border-left: 4px solid var(--primary);
       transition: transform 0.3s;
     }
 
@@ -78,13 +78,13 @@
     }
 
     .feature-card h3 {
-      color: #2c3e50;
+      color: var(--text);
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
 
     .feature-card p {
-      color: #555;
+      color: var(--text-light);
       line-height: 1.7;
     }
 
@@ -100,7 +100,6 @@
 </head>
 <body>
 
-  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -109,42 +108,7 @@
       <ul class="menu" id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li>
-          <a href="#">Software <span class="submenu-toggle">▾</span></a>
-          <ul class="submenu">
-            <li>
-              <a href="#">Automation <span class="submenu-toggle">▾</span></a>
-              <ul class="submenu">
-                <li><a href="youtube-multi.html">YouTube Multi Channels Data Extractor Pro</a></li>
-                <li><a href="youtube-single.html">YouTube Single Channel Data Extractor Pro</a></li>
-                <li><a href="auto-disk-cleaner.html">Auto Disk Cleaner l Temp Files Cleaner</a></li>
-                <li><a href="icon-converter.html">Professional icon converter</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">RAG System <span class="submenu-toggle">▾</span></a>
-              <ul class="submenu">
-                <li><a href="rag-basic.html">RAG Basic</a></li>
-                <li><a href="rag-advanced.html">RAG Advanced</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Agentic AI <span class="submenu-toggle">▾</span></a>
-              <ul class="submenu">
-                <li><a href="agentic-basic.html">Agentic Basic</a></li>
-                <li><a href="agentic-pro.html">Agentic Pro</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Chatbot <span class="submenu-toggle">▾</span></a>
-              <ul class="submenu">
-                <li><a href="chatbot-basic.html">Chatbot Basic</a></li>
-                <li><a href="chatbot-pro.html">Chatbot Pro</a></li>
-                <li><a href="kidchat-ai.html">KidChat AI</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <li><a href="projects.html">Software</a></li>
         <li>
           <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
           <ul class="submenu">
@@ -152,7 +116,7 @@
             <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
           </ul>
         </li>
-        <li><a href="payment.html">Payment</a></li> 
+        <li><a href="payment.html">Payment</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
@@ -164,7 +128,7 @@
       <h1>Smart Apps for Business</h1>
       <p>Automating your daily tasks with smart Python applications.</p>
       <p>AI RAG systems, Agentic AI, and Chatbots for productivity.</p>
-      <a href="payment.html" class="cta-button">See All Tools →</a> 
+      <a href="projects.html" class="cta-button">See All Tools →</a>
     </section>
 
     <section class="features">
@@ -191,12 +155,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
