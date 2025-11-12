@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Label Generator — AutoPyAI</title>
+  <title>Auto Disk Cleaner: Tray-based • Fully customizable • Zero hassle | AutoPyAI</title>
   <link rel="stylesheet" href="style.css">
   <script src="header.js" defer></script>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo"><a href="index.html">AutoPyAI</a></div>
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
       <ul class="menu" id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,7 +24,7 @@
             <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
           </ul>
         </li>
-        <li><a href="payment.html">Payment</a></li>   
+	    <li><a href="payment.html">Payment</a></li>  
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
@@ -30,65 +32,94 @@
   </header>
 
   <main>
-    <section class="hero hero-blue">
-      <h1>Text Label Generator</h1>
-      <p>Tired of cumbersome, expensive design tools for creating product labels? AutoPyAi have built a streamlined, efficient, and powerful Digital Text Label Generator.</p>
-    </section>
-
-    <h2 class="section-title">Features & Benefits</h2>
+    <section class = "hero hero-blue">	
+	  <h1>Auto Disk Cleaner</h1>
+    	<p class="hero-subhead">Auto Disk Cleaner - Silent. Scheduled. Smart. Keep your PC lean and fast. Automatically delete temp files while you work. Runs in system tray, cleans on schedule, and frees up space without lifting a finger. Tray-based • Fully customizable • Zero hassle</p>
+	</section>
+	
+    <class="section-title"<h2>Key Features</h2>
     <div class="features">
       <div class="feature-card">
-        <h3>Customizable Labels</h3>
-        <p>Easily input label text, choose foreground and background colors, and set dimensions (width & height).</p>
+     	<h3>Automatic cleaning:</h3>
+      	<p>Automatically clean temporary files from your system — silently, smartly, and on schedule.</p>
       </div>
       <div class="feature-card">
-        <h3>Dynamic Row Management</h3>
-        <p>Add as many custom colorful labels as you need with the "Add Row" button or simply by pressing Enter.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Batch Generation</h3>
-        <p>Hit "Generate Label" to automatically create and save all your labels in an organized "Generated Labels" folder.</p>
-      </div>
-      <div class="feature-card">
-        <h3>One-Click Reset</h3>
-        <p>Start fresh anytime with the "Clear All" button.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Local & Offline Use</h3>
-        <p>No subscriptions, no internet needed—just install and run!</p>
-      </div>
-    </div>
+	   <h3>Runs without interupting system:</h3>      
+       	   <p>Developed with Python, this lightweight desktop utility runs quietly in your system tray and auto-deletes junk files to free up disk space— without interrupting your workflow.</p>
+     </div>
 
-    <div class="use-case">
+     <div class="feature-card">
+    	 <h3>Tray-Based Minimal Interface: </h3>
+    	 <p> Runs unobtrusively in the system tray. Open the GUI anytime to adjust settings or trigger cleanup manually.</p>
+     </div>
+
+     <div class="feature-card">
+    	 <h3>Flexible Scheduling: </h3>
+      	 <p> Set cleanup frequency: Hourly, Daily, or Weekly — plus choose exact time and specific days of the week.</p>
+     </div>
+
+     <div class="feature-card">
+    	 <h3>One-Click Manual Cleanup:</h3>
+	 <p> Instantly clean temp files with the “Clean Now” button — ideal for quick performance boosts.</p>
+     </div>
+
+     <div class="feature-card">
+     	 <h3>Startup Integration:</h3>
+         <p> Optionally add to Windows startup so it runs automatically when you log in — always ready to keep your system tidy. </p>
+     </div>
+     
+     <div class="feature-card">
+       <h3>Real-Time Status & Stats:</h3>
+       <p>See exactly how many files were cleaned and how much space was freed — plus view next scheduled cleanup.</p>
+     </div>
+
+     <div class="feature-card">
+        <h3>Safe & Lightweight:</h3>
+        <p>Built in Python, it doesn’t require admin rights (for most operations) and is safe for everyday use on personal or work machines.</p>
+     </div>
+
+     <div class="feature-card">
+        <h3>User-Friendly Controls:</h3>
+        <p>Save settings, minimize to tray, or remove from startup — all with intuitive buttons designed for non-tech users.</p>
+    </div>
+ </div>
+
+  <div"use-case">
       <h3>Perfect For:</h3>
-      <p>1- E-commerce product labels 🏷️.</p>
-      <p>2- Shopify & Woo Commerce stores 🛒</p>
-      <p>3- Small business inventory management 📦</p>
-      <p>4- Custom merchandise branding ✨</p>
-      <p>5- Print-on-demand workflows 🖨️</p>
+      <p>1- Busy professionals who want a clutter-free system without manual maintenance.</p>
+	  <p>2- Students and developers generating temporary files during projects or coding sessions.</p>
+	  <p>3- Non-technical users seeking a simple, set-and-forget solution for disk cleanup.</p>
+	  <p>4- Anyone tired of slow performance caused by accumulated junk files over time.</p>
+      <p>5- AutoPyAi – Because your disk shouldn’t be a junkyard.</p>
     </div>
 
-    <div class="screenshot-container">
+ <!--
+    <h2>How It Works</h2>
+    <ol class="feature-list">
+      <li>Download and unzip the tool</li>
+      <li>Place your documents in the <code>docs/</code> folder</li>
+      <li>Run <code>rag_basic.py</code></li>
+      <li>Type your question — get instant, accurate answers</li>
+    </ol>
+-->
+
+  <div class="screenshot-container">
       <h2>Tool Interface</h2>
-      <img src="text-label-generator-screenshot1.png" alt="Text Label Generator UI" class="screenshot">
-      <p class="small">*Real output — generate custom colored multi text labels in one click</p>
-    </div> 
-
-    <div class="screenshot-container">
-      <h2>Generated Labels</h2>
-      <img src="text-label-generator-screenshot2.png" alt="Generated Labels Folder" class="screenshot">
-      <p class="small">*All labels saved automatically in 'Generated Labels' folder</p>
-    </div> 
-
-    <div class="call-to-action">
-      <h2>Ready to convert your tiresome work with one click?</h2>
-      <p>One-time payment. Lifetime updates. No subscriptions. Zero cloud dependency.</p>
-      <a href="payment.html" class="cta-button">Buy Now — $69 One-Time</a>
+      <img src="auto-disk-cleaner-screenshot.png" alt="Auto-Disk_Cleaner - GUI main schedule setting and stats display form" width="700">
+      <p class="small" style="margin-top: 1rem; color: #7f8c8d;">*Auto-disk-cleaner schedule setting and stats view — User can set weekly / daily / hourly schedule for temp files cleaning.</p>
     </div>
-    
+
+     <div class="call-to_action">
+      <h2>Ready to auto clean your disk temp files?</h2>
+      <p>One-time payment. Lifetime updates. No subscriptions. Zero cloud dependency.</p>
+      <a href="https://autopyai.github.io/payment.html" class="buy-btn">Buy Now — $99 One-Time</a>
+    </div>
+
+
     <div class="footer-brand">
-      © 2025 Text Label Generator — Made by Suhail Asghar. All rights reserved.
+      © 2025 Auto Disk Cleaner — Made by Suhail Asghar. All rights reserved.
     </div>
   </main>
+
 </body>
 </html>
