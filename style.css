@@ -1,6 +1,6 @@
 /* ====== :root — SINGLE THEME FOR ENTIRE SITE ====== */
 :root {
-  --primary: #0ea5e9;        /* Ocean Blue */
+  --primary: #0ea5e9;        /* Ocean Blue (for all other pages) */
   --primary-dark: #0284c7;
   --primary-light: #7dd3fc;
   --text: #1e293b;
@@ -8,6 +8,9 @@
   --bg: #f9fbfd;
   --card-bg: white;
   --border: #e2e8f0;
+  --deep-blue: #1e40af;      /* Deep blue for projects.html */
+  --deep-blue-dark: #1e3a8a;
+  --deep-blue-light: #3b82f6;
 }
 
 /* ====== RESET ====== */
@@ -330,18 +333,18 @@ main {
 }
 
 .software-sidebar {
-  width: 200px;
-  background: var(--primary);
+  width: 190px; /* slightly narrower for 4 cards */
+  background: var(--deep-blue);
   color: white;
   border-radius: 14px;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+  padding: 1.4rem 1rem;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
   margin-top: 1.5rem;
   min-height: calc(100vh - 200px);
 }
 
 .software-sidebar h2 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   margin-bottom: 1.2rem;
   text-align: center;
   font-weight: 700;
@@ -351,12 +354,12 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 8px 12px;
+  padding: 7px 12px;
   background: transparent;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -369,8 +372,8 @@ main {
 }
 
 .software-sidebar .filter-btn.active {
-  background: white;
-  color: var(--primary);
+  background: var(--deep-blue-light);
+  color: var(--deep-blue);
 }
 
 .software-content {
@@ -384,24 +387,24 @@ main {
 }
 
 .software-search input {
-  width: 280px;
+  width: 260px;
   max-width: 100%;
-  padding: 7px 12px;
+  padding: 6px 12px;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   outline: none;
 }
 
 .software-search input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  border-color: var(--deep-blue-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); /* 4 per row */
+  gap: 1.2rem;
 }
 
 .project-card {
@@ -418,56 +421,56 @@ main {
 }
 
 .card-header {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, var(--deep-blue), var(--deep-blue-dark));
   color: white;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .card-header h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0;
   font-weight: 600;
 }
 
 .card-category {
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   opacity: 0.9;
   margin-top: 0.2rem;
 }
 
 .card-body {
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .card-body p {
   color: #475569;
   line-height: 1.5;
-  font-size: 0.88rem;
-  margin-bottom: 0.9rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.8rem;
 }
 
 .card-actions {
   display: flex;
-  gap: 0.55rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
 .card-link, .github-link {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 9px;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   text-decoration: none;
 }
 
 .card-link {
-  background: #ecfeff;
-  color: #0891b2;
+  background: #dbeafe;
+  color: var(--deep-blue);
 }
 
 .card-link:hover {
-  background: #cffafe;
+  background: #bfdbfe;
 }
 
 .github-link {
@@ -477,5 +480,5 @@ main {
 
 .github-link:hover {
   background: #e2e8f0;
-  color: var(--primary);
+  color: var(--deep-blue);
 }
