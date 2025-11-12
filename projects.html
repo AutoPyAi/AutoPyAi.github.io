@@ -29,25 +29,22 @@
   </header>
 
   <main class="software-main">
+    <aside class="software-sidebar">
+      <h2>Categories</h2>
+      <div id="sidebarButtons"></div>
+    </aside>
+
     <section class="software-content">
       <div class="page-header">
         <h1>Our Software Suite</h1>
         <p>Professional, offline, and privacy-first tools for productivity.</p>
       </div>
 
-      <div style="display: flex; gap: 1.8rem; flex-wrap: wrap;">
-        <aside class="software-sidebar">
-          <h2>Categories</h2>
-          <div id="sidebarButtons"></div>
-        </aside>
-
-        <div class="software-content">
-          <div class="software-search">
-            <input type="text" id="search" placeholder="Search tools (e.g., YouTube, Disk Cleaner)..." />
-          </div>
-          <div class="projects-grid" id="projectsGrid"></div>
-        </div>
+      <div class="software-search">
+        <input type="text" id="search" placeholder="Search tools (e.g., YouTube, Disk Cleaner)..." />
       </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
     </section>
   </main>
 
@@ -57,8 +54,7 @@
       { name: "YouTube Single Channel Data Extractor Pro", category: "automation", description: "Extract videos, stats, and metadata from any single YouTube channel.", link: "youtube-single.html" },
       { name: "Auto Disk Cleaner", category: "automation", description: "Automatically clean temp files, cache, and junk to free up disk space.", link: "auto-disk-cleaner.html" },
       { name: "Icon Converter", category: "automation", description: "Convert images to high-quality .ico files for desktop and web applications.", link: "icon-converter.html" },
-      { name: "Text Label Generator", category: "automation", description: "Generates multiple custom text labels quickly without needing complex design software.", link: "text-label-generator.html" },
-      { name: "Text & Image Label Generator", category: "automation", description: "Generates multiple custom text & image labels quickly without needing complex design software.", link: "image-label-generator.html" },
+      { name: "Text Label Generator", category: "automation", description: "Generate custom product labels with colors, size, and batch export — all offline.", link: "text-label-generator.html" },
       { name: "RAG Basic", category: "rag", description: "Local Retrieval-Augmented Generation system for private document Q&A.", link: "rag-basic.html" },
       { name: "RAG Advanced", category: "rag", description: "Enhanced RAG with multi-document support, metadata filtering, and UI.", link: "rag-advanced.html" },
       { name: "Agentic Basic", category: "agentic", description: "AI agents that perform simple automated tasks based on your goals.", link: "agentic-basic.html" },
@@ -147,7 +143,6 @@
     renderSidebar();
     renderProjects();
   </script>
-
   <script src="header.js" defer></script>
 </body>
 </html>
