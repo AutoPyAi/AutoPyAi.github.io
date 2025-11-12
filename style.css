@@ -8,9 +8,10 @@
   --bg: #f9fbfd;
   --card-bg: white;
   --border: #e2e8f0;
-  --deep-blue: #0000CD; /* #1e40af; */     /* Deep blue for projects.html */
-  --deep-blue-dark: #1e3a8a;
-  --deep-blue-light: #3b82f6;
+ /* Medium Blue for Software Suite */
+  --medium-blue: #0000cd;
+  --medium-blue-dark: #00008b;   /* darker shade for gradients/hover */
+  --medium-blue-light: #4682b4;  /* steel blue — lighter accent */
 }
 
 /* ====== RESET ====== */
@@ -323,7 +324,7 @@ main {
   margin-top: 0.5rem;
 }
 
-/* ====== SOFTWARE SUITE PAGE (projects.html) ====== */
+/* ====== SOFTWARE SUITE PAGE (projects.html) — Medium Blue Theme ====== */
 .software-main {
   display: flex;
   gap: 1.8rem;
@@ -333,12 +334,12 @@ main {
 }
 
 .software-sidebar {
-  width: 190px; /* slightly narrower for 4 cards */
-  background: var(--deep-blue);
+  width: 190px;
+  background: var(--medium-blue);
   color: white;
   border-radius: 14px;
   padding: 1.4rem 1rem;
-  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 205, 0.25);
   margin-top: 1.5rem;
   min-height: calc(100vh - 200px);
 }
@@ -368,12 +369,12 @@ main {
 }
 
 .software-sidebar .filter-btn:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .software-sidebar .filter-btn.active {
-  background: var(--deep-blue-light);
-  color: var(--deep-blue);
+  background: var(--medium-blue-light);
+  color: var(--medium-blue);
 }
 
 .software-content {
@@ -397,13 +398,13 @@ main {
 }
 
 .software-search input:focus {
-  border-color: var(--deep-blue-light);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  border-color: var(--medium-blue-light);
+  box-shadow: 0 0 0 3px rgba(70, 130, 180, 0.2);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); /* 4 per row */
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 1.2rem;
 }
 
@@ -411,17 +412,17 @@ main {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
 }
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.07);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
 }
 
 .card-header {
-  background: linear-gradient(135deg, var(--deep-blue), var(--deep-blue-dark));
+  background: linear-gradient(135deg, var(--medium-blue), var(--medium-blue-dark));
   color: white;
   padding: 0.75rem 1rem;
 }
@@ -466,7 +467,7 @@ main {
 
 .card-link {
   background: #dbeafe;
-  color: var(--deep-blue);
+  color: var(--medium-blue);
 }
 
 .card-link:hover {
@@ -480,6 +481,5 @@ main {
 
 .github-link:hover {
   background: #e2e8f0;
-  color: var(--deep-blue);
+  color: var(--medium-blue);
 }
-
