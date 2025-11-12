@@ -6,157 +6,8 @@
   <title>Chatbot Basic — Learn AI with Python & Gemini | AutoPyAI</title>
   <link rel="stylesheet" href="style.css">
   <script src="header.js" defer></script>
-  <style>
-    /* Product-specific styling */
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      color: #2c3e50;
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .hero-subhead {
-      font-size: 1.4rem;
-      color: #555;
-      text-align: center;
-      margin-bottom: 3rem;
-      font-weight: 500;
-    }
-
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-top: 3rem;
-    }
-
-    .feature-list {
-      margin: 2rem 0;
-      padding-left: 1.5rem;
-    }
-
-    .feature-list li {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .feature-list li:before {
-      content: "✓";
-      color: #3498db;
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-
-    .tech-badge {
-      display: inline-block;
-      background: #f0f7ff;
-      color: #3498db;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      margin: 0 5px 10px 0;
-    }
-
-    .buy-section {
-      text-align: center;
-      margin: 4rem 0;
-      padding: 2.5rem;
-      background: linear-gradient(135deg, #3498db, #2980b9);
-      color: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
-    }
-
-    .buy-section h2 {
-      color: white;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-
-    .buy-section p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .buy-btn {
-      display: inline-block;
-      background: #e74c3c;
-      color: white;
-      padding: 16px 32px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s, transform 0.2s;
-      margin-top: 1rem;
-    }
-
-    .buy-btn:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-    }
-
-    .screenshot-container {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .screenshot-container img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      margin: 1rem auto;
-    }
-
-    .use-case {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin: 2rem 0;
-      border-left: 4px solid #3498db;
-    }
-
-    .use-case h3 {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-
-    .note {
-      background: #fff8e1;
-      border-left: 4px solid #ffb300;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 0 8px 8px 0;
-      font-size: 1.05rem;
-      color: #5d4037;
-    }
-
-    .footer-brand {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #eee;
-      color: #7f8c8d;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- ✅ EMBEDDED HEADER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -181,23 +32,45 @@
   </header>
 
   <main>
-    <h1>Chatbot Basic</h1>
-    <p class="hero-subhead">Learn how to build your first AI chatbot — using Google Gemini 2.0 Flash, simple Python, and zero complexity.</p>
+    <class section = "hero hero-blue">
+      <h1>Chatbot Basic</h1>
+      <p>Learn how to build your first AI chatbot — using Google Gemini 2.0 Flash, simple Python, and zero complexity.</p>
+    </section> 
+   
+    <h2 class="section-title"><h2>Why This Tool?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Built for learning:</h3> 
+        <p>clean, readable code with comments</p>
+      </div>
+    
+      <div class="feature-card">
+       <h3>Simple framework:</h3>h3>
+       <p>Uses only standard Python + Google’s Gemini API — no complex frameworks</p>
+      </div>
+
+      <div class="feature-card">
+       <h3>Terminal-based:</h3>
+       <p>Run it right in VS Code’s integrated terminal</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Easy setup</h3>
+        <p>Requires only one API key — easy to set up with `.env.example`</p>
+      </div>
+ 
+      <div class="feature-card">   
+        <h3>Lightweight:</h3> 
+        <p>Runs instantly on any laptop</p>
+      </div>
+         
+   </div>
 
     <div class="use-case">
       <h3>Perfect For:</h3>
-      <p>Students, beginners, and self-learners who want to understand how AI chatbots work — step by step — without overwhelming libraries or cloud dependencies.</p>
+      <p>1: Students, beginners, and self-learners who want to understand how AI chatbots work — step by step — without overwhelming libraries or cloud dependencies.</p>
+      <p>2: School projects, coding bootcamps, or personal study</li>
     </div>
-
-    <h2>Why This Tool?</h2>
-    <ul class="feature-list">
-      <li>✅ Built for learning — clean, readable code with comments</li>
-      <li>✅ Uses only standard Python + Google’s Gemini API — no complex frameworks</li>
-      <li>✅ Terminal-based — run it right in VS Code’s integrated terminal</li>
-      <li>✅ Requires only one API key — easy to set up with `.env.example`</li>
-      <li>✅ Lightweight — runs instantly on any laptop</li>
-      <li>✅ Perfect for school projects, coding bootcamps, or personal study</li>
-    </ul>
 
     <div class="note">
       💡 <strong>Note:</strong> This tool requires an internet connection to use Google’s Gemini API.  
@@ -248,6 +121,7 @@
 
 </body>
 </html>
+
 
 
 
