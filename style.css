@@ -8,7 +8,7 @@
   --bg: #f9fbfd;
   --card-bg: white;
   --border: #e2e8f0;
-  --deep-blue: #1e40af;      /* Deep blue for projects.html */
+  --deep-blue: #0000CD; /* #1e40af; */     /* Deep blue for projects.html */
   --deep-blue-dark: #1e3a8a;
   --deep-blue-light: #3b82f6;
 }
@@ -482,3 +482,4 @@ main {
   background: #e2e8f0;
   color: var(--deep-blue);
 }
+
