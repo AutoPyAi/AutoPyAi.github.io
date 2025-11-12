@@ -1,9 +1,8 @@
-/* ====== :root — Centralized Theme (Ready for Global Updates Later) ====== */
+/* ====== :root — SINGLE THEME FOR ENTIRE SITE ====== */
 :root {
-  --primary: #2563eb;        /* main blue (used on other pages) */
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary: #0ea5e9;      /* ocean blue — reserved for software page */
+  --primary: #0ea5e9;        /* Ocean Blue */
+  --primary-dark: #0284c7;
+  --primary-light: #7dd3fc;
   --text: #1e293b;
   --text-light: #64748b;
   --bg: #f9fbfd;
@@ -11,7 +10,7 @@
   --border: #e2e8f0;
 }
 
-/* ====== RESET & BASE STYLES ====== */
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +29,7 @@ a {
   color: inherit;
 }
 
-/* ====== NAVIGATION MENU ====== */
+/* ====== HEADER ====== */
 header {
   background: #1a1a1a;
   padding: 10px 0;
@@ -79,7 +78,6 @@ header {
   background: var(--primary);
 }
 
-/* Dropdowns (Feedback only) */
 .submenu {
   list-style: none;
   position: absolute;
@@ -112,7 +110,6 @@ header {
   display: flex;
 }
 
-/* Mobile menu */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -154,7 +151,7 @@ header {
   }
 }
 
-/* ====== GENERAL PAGE STYLES ====== */
+/* ====== GLOBAL LAYOUT ====== */
 main {
   max-width: 1200px;
   margin: 4rem auto;
@@ -170,17 +167,35 @@ main {
   font-size: 0.9rem;
 }
 
-/* ====== HERO, BUTTONS, CARDS ====== */
+/* ====== BUTTONS ====== */
+.cta-button, .submit-btn, .buy-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover, .submit-btn:hover, .buy-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ====== HERO & HEADINGS ====== */
 .hero {
   text-align: center;
   padding: 4rem 0;
   border-radius: 12px;
   margin-bottom: 3rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  color: white;
-  font-size: 1.1rem;
-  margin: 0.3rem 0;
-  line-height: 1.5;
 }
 
 .hero-blue {
@@ -198,30 +213,25 @@ main {
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.4rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  line-height: 1.7;
-  color: #555;
-}
-
-.cta-button, .submit-btn, .buy-btn {
-  display: inline-block;
-  background: var(--primary);
+.hero-blue p {
   color: white;
-  padding: 16px 32px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-  margin-top: 1rem;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  line-height: 1.5;
 }
 
-.cta-button:hover, .submit-btn:hover, .buy-btn:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
+.section-title {
+  color: var(--text);
+  font-size: 2rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* ====== CARDS & GRIDS ====== */
+.features, .payment-methods, .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
 .feature-card, .payment-card, .testimonial-card, .contact-info {
@@ -230,6 +240,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   border-left: 4px solid var(--primary);
+  transition: transform 0.3s;
 }
 
 .feature-card:hover, .payment-card:hover {
@@ -247,24 +258,54 @@ main {
   line-height: 1.7;
 }
 
-/* Grids */
-.features, .payment-methods, .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+/* ====== CALL TO ACTION ====== */
+.call-to-action {
+  text-align: center;
   margin: 4rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+  border-radius: 12px;
 }
 
-/* Forms */
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border);
+.call-to-action h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.call-to-action p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+/* ====== USE CASES / NOTES ====== */
+.use-case {
+  background: #f8f9fa;
+  padding: 1.5rem;
   border-radius: 8px;
-  font-size: 1rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary);
 }
 
-/* Screenshots */
+.use-case h3 {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+/* ====== SCREENSHOTS ====== */
+.screenshot-container {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.screenshot-container h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
 .screenshot {
   max-width: 100%;
   max-height: 600px;
@@ -279,27 +320,7 @@ main {
   margin-top: 0.5rem;
 }
 
-/* GitHub Link */
-.github-link {
-  color: #333 !important;
-  padding: 10px 15px !important;
-  display: block !important;
-  text-decoration: none !important;
-  border-radius: 4px !important;
-  transition: background 0.2s !important;
-}
-
-.github-link:hover {
-  background: #f0f0f0 !important;
-  color: var(--primary) !important;
-}
-
-/* 
-   ==================================================
-   SOFTWARE SUITE PAGE STYLES (projects.html)
-   Uses ocean blue: --secondary = #0ea5e9
-   ==================================================
-*/
+/* ====== SOFTWARE SUITE PAGE (projects.html) ====== */
 .software-main {
   display: flex;
   gap: 1.8rem;
@@ -310,15 +331,12 @@ main {
 
 .software-sidebar {
   width: 200px;
-  background: var(--secondary); /* ocean blue */
+  background: var(--primary);
   color: white;
   border-radius: 14px;
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
-  align-self: flex-start;
-  /* Start below header */
   margin-top: 1.5rem;
-  /* Extend to bottom */
   min-height: calc(100vh - 200px);
 }
 
@@ -352,7 +370,7 @@ main {
 
 .software-sidebar .filter-btn.active {
   background: white;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .software-content {
@@ -376,14 +394,14 @@ main {
 }
 
 .software-search input:focus {
-  border-color: var(--secondary);
+  border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 3+ per row */
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.4rem;
 }
 
 .project-card {
@@ -392,8 +410,6 @@ main {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   border: 1px solid #e2e8f0;
-  /* Smaller padding for compactness */
-  padding: 0;
 }
 
 .project-card:hover {
@@ -402,46 +418,46 @@ main {
 }
 
 .card-header {
-  background: linear-gradient(135deg, var(--secondary), #0284c7);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1rem;
 }
 
 .card-header h3 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: 600;
 }
 
 .card-category {
-  font-size: 0.7rem;
+  font-size: 0.74rem;
   opacity: 0.9;
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
 }
 
 .card-body {
-  padding: 0.8rem 1rem;
+  padding: 1rem;
 }
 
 .card-body p {
   color: #475569;
   line-height: 1.5;
-  font-size: 0.82rem;
-  margin-bottom: 0.7rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.9rem;
 }
 
 .card-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.55rem;
   flex-wrap: wrap;
 }
 
 .card-link, .github-link {
   display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 5px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   text-decoration: none;
 }
 
@@ -461,6 +477,5 @@ main {
 
 .github-link:hover {
   background: #e2e8f0;
-  color: var(--secondary);
+  color: var(--primary);
 }
-
