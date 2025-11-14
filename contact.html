@@ -6,50 +6,8 @@
   <title>Contact — AutoPyAI</title>
   <link rel="stylesheet" href="style.css">
   <script src="header.js" defer></script>
-  <style>
-    .hero {
-      text-align: center;
-      padding: 3rem 0;
-      margin-bottom: 3rem;
-      border-bottom: 2px solid #eee;
-    }
-
-    .hero h1 {
-      color: #2c3e50;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      color: #555;
-      font-size: 1.2rem;
-      line-height: 1.7;
-    }
-
-    .feature-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      margin-bottom: 2rem;
-      border-left: 4px solid #3498db;
-    }
-
-    .feature-card h2 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-
-    .feature-card p {
-      color: #555;
-      line-height: 1.7;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- ✅ EMBEDDED HEADER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -74,26 +32,27 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-blue">
       <h1>Contact Us</h1>
       <p>If you have any questions about my Python automation tools, RAG systems, Agentic AI, or chatbots — I'd love to hear from you.</p>
     </section>
+    <div class ="features">
+      <div class="feature-card">
+        <h2>Our Contact Details</h2>
+        <p><strong>Email:</strong> <a href="mailto:autopyai@gmail.com">autopyai@gmail.com</a></p>
+        <p><strong>WhatsApp / Phone:</strong> <a href="tel:+92XXXXXXXXXX">+92 XXX XXXXXXX</a> (Pakistan)</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/AutoPyAi" target="_blank">github.com/AutoPyAi</a></p>
+      </div>
 
-    <div class="feature-card">
-      <h2>Our Contact Details</h2>
-      <p><strong>Email:</strong> <a href="mailto:autopyai@gmail.com">autopyai@gmail.com</a></p>
-      <p><strong>WhatsApp / Phone:</strong> <a href="tel:+92XXXXXXXXXX">+92 XXX XXXXXXX</a> (Pakistan)</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/AutoPyAi" target="_blank">github.com/AutoPyAi</a></p>
-    </div>
-
-    <div class="feature-card">
-      <h2>Send Me a Message</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="feature-card">
+        <h2>Send Me a Message</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required placeholder="Enter your full name">
         </div>
-
+    </div>
+      
         <div class="form-group">
           <label for="email">Your Email</label>
           <input type="email" id="email" name="email" required placeholder="you@example.com">
@@ -127,6 +86,7 @@
 </body>
 
 </html>
+
 
 
 
