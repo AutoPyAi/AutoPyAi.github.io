@@ -6,110 +6,8 @@
   <title>Give Feedback — AutoPyAI</title>
   <link rel="stylesheet" href="style.css">
   <script src="header.js" defer></script>
-  <style>
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      color: #2c3e50;
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .hero-subhead {
-      color: #555;
-      font-size: 1.4rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      font-weight: 500;
-    }
-
-    .form-container {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      margin-top: 2rem;
-    }
-
-    .form-container h2 {
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 1rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-family: inherit;
-    }
-
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .submit-btn {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      background: #3498db;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .submit-btn:hover {
-      background: #2980b9;
-    }
-
-    .note {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #7f8c8d;
-      italic;
-    }
-
-    .footer-brand {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #eee;
-      color: #7f8c8d;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- ✅ EMBEDDED HEADER — NO FETCH, NO PLACEHOLDER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -134,37 +32,39 @@
   </header>
 
   <main>
-    <h1>Give Your Feedback</h1>
-    <p class="hero-subhead">We value your opinion! Help us improve our tools for you.</p>
+    <section class="hero hero-blue"
+      <h1>Give Your Feedback</h1>
+      <p>We value your opinion! Help us improve our tools for you.</p>
+    </section>
+    <div class = "features">
+      <div class="feature-card">
+        <h2>Share Your Experience</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          </div>
 
-    <div class="form-container">
-      <h2>Share Your Experience</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your full name">
-        </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
 
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@example.com">
-        </div>
-
-        <div class="form-group">
-          <label for="product">Which Tool Did You Use?</label>
-          <select id="product" name="product" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="YouTube Multi Extractor">YouTube Multi Channels Data Extractor Pro</option>
-            <option value="YouTube Single Extractor">YouTube Single Channel Data Extractor Pro</option>
-            <option value="RAG Basic">RAG Basic</option>
-            <option value="RAG Advanced">RAG Advanced</option>
-            <option value="Agentic AI Basic">Agentic AI Basic</option>
-            <option value="Agentic AI Pro">Agentic AI Pro</option>
-            <option value="Chatbot Basic">Chatbot Basic</option>
-            <option value="Chatbot Pro">Chatbot Pro</option>
-            <option value="Other">Other / General Feedback</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="product">Which Tool Did You Use?</label>
+              <select id="product" name="product" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="YouTube Multi Extractor">YouTube Multi Channels Data Extractor Pro</option>
+              <option value="YouTube Single Extractor">YouTube Single Channel Data Extractor Pro</option>
+              <option value="RAG Basic">RAG Basic</option>
+              <option value="RAG Advanced">RAG Advanced</option>
+              <option value="Agentic AI Basic">Agentic AI Basic</option>
+              <option value="Agentic AI Pro">Agentic AI Pro</option>
+              <option value="Chatbot Basic">Chatbot Basic</option>
+              <option value="Chatbot Pro">Chatbot Pro</option>
+              <option value="Other">Other / General Feedback</option>
+            </select>
+          </div>
 
         <div class="form-group">
           <label for="rating">How would you rate your experience?</label>
@@ -185,12 +85,14 @@
 
         <button type="submit" class="submit-btn">Submit Feedback</button>
       </form>
-
+   </div>
+</div>
+      
       <p class="note">
         We use <strong>Formspree</strong> to securely collect your feedback.  
         Your data is never sold or shared.
       </p>
-    </div>
+
 
     <div class="footer-brand">
       © 2025 AutoPyAI — Made by Suhail Asghar. All rights reserved.
@@ -200,6 +102,7 @@
 </body>
 
 </html>
+
 
 
 
