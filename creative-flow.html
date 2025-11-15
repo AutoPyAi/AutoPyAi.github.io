@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Flow | AutoPyAI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">AutoPyAI</a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Software</a></li>
+        <li>
+          <a href="#">Feedback <span class="submenu-toggle">▾</span></a>
+          <ul class="submenu">
+            <li><a href="feedback-form.html">Give Your Feedback</a></li>
+            <li><a href="feedback-list.html">Read Our Client's Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li> 
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class = "hero hero-blue">
+      <h1>Creative Flow</h1>
+      <p class="hero-subhead">
+           Transform Raw Creatives data into AI-Ready Intelligence  — instantly, offline on one click.
+           CreativeFlow is a smart, automated data pipeline that converts messy, duplicate-heavy ad creatives from spy tools into clean, scored, tagged, and deduplicated records — ready for analytics, reporting, and training large language and vision models. 
+     </p>
+    </section>
+
+    <h3>Key Features</h3>
+     <div class="features">
+      <div class="feature-card">
+        <h3>Smart Deduplication:</h3>
+        <p>Merges near-identical creatives (same headline + image) while preserving aggregate performance metrics.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Performance Scoring (0–100):</h3>
+        <p>Normalizes CTR and engagement into a consistent, interpretable score — ideal for ranking or model labels.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Context-Aware Tagging:</h3>
+        <p>Applies semantic tags (e.g., e-commerce, fitness, education) using configurable rules — no manual labeling needed.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Multi-Format Support:</h3>
+        <p>Processes both JSON and CSV exports from AdSpy, PowerAdSpy, Facebook Ad Library, and more.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Batch & Single-File Processing:</h3>
+        <p>Clean one file or an entire campaign folder in one click.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>AI-Ready Output:</h3>
+        <p>Structured JSON with consistent schema, unique IDs, and metadata — perfect for fine-tuning or RAG systems.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Privacy-First & Local:</h3>
+        <p>All processing happens on your machine — no data leaves your device.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Developer-Friendly:</h3>
+        <p>Tag rules defined in tags.yaml — update categories without touching code.</p>
+      </div>
+   </div>
+    
+    <div class="feature-card">
+      <h3>🔄 Usage Workflow :</h3>
+      <p>1-Select Input → Choose a single raw creative file or a folder of .json/.csv exports.</p>
+      <p>2-Auto-Process → CreativeFlow deduplicates, calculates CTR, assigns scores, and applies tags.</p>
+      <p>3-Students & hobbyists building desktop tools and want professional-looking icons.</p>
+      <p>4- Review Output → Cleaned records saved to ./cleaned_output/ with:
+           <li>Unique creative_id</li>
+	   <li>Aggregated metrics</li>
+	   <li>performance_score (0–100)</li>
+	   <li>Semantic tags</li>
+	   <li>source_file (for batch mode)</li>
+      </p>
+   </div>
+
+   <div class="feature-card">
+      <h3>🔄 Use for AI Training</h3>
+      <p>Feed the structured JSON directly into:
+           <li>Fine-tuning datasets for ad-performance prediction</li>
+	   <li>Embedding pipelines for creative similarity search</li>
+	   <li>Reinforcement learning reward models</li>
+	   <li>Synthetic data generation systems</li>
+      </p>
+   </div>
+
+  <div class="use-case">
+      <h3>Perfect For:</h3>
+      <p> AI/ML Teams Building Advertising Intelligence Models</p>
+      <p>CreativeFlow solves the #1 bottleneck in ad-tech AI</p>
+      <p> turning noisy, unstructured creative data into labeled, standardized training examples. By providing:</p> 
+	   <li>✅ Consistent input features (headline, image URL, category)</li>
+	   <li>✅ Quantitative labels (performance_score, CTR)</li>
+	   <li>✅ Semantic context (tags like weight-loss, gaming, education)</li>
+	   <li>✅ Deduplicated, high-signal records (no duplicate bias in training)</li>
+      <p>Your models learn what truly drives engagement — not artifacts of data duplication or noise.</p>  
+      <p> Whether you’re training: </p>
+	   <li>A creative performance predictor</li>
+	   <li>A text-to-ad generator (LLM fine-tuning)</li>
+	   <li>A multimodal ad classifier (vision + text)</li>
+	   <li>A recommendation engine for ad copy</li>
+    </div>
+
+   <h3>CreativeFlow gives you clean, trustworthy, production-grade data — out of the box.</h3> 
+    <div class="feature-card">
+   	<p>Why It Matters for LLMs & AI Systems?</p>
+          <p>Raw spy data is unstructured, redundant, and inconsistent— making it toxic for model training.
+              Raw spy data is unstructured, redundant, and inconsistent. CreativeFlow acts as your data refinery, 
+              turning crude exports into high-octane fuel for AI — accelerating development,
+              improving accuracy, and reducing labeling costs.             
+          </p>        
+
+   
+   <div class="screenshot-container">
+      <img src="creative-flow-interface-screenshot1.png" alt="Creative Flow - Main user front end Interface." width="700">
+      <p class="small">"Creative Flow - Main user front end Interface.</p>
+  </div>
+
+  <div class="screenshot-container">
+      <img src="creative-flow-output-screenshot2.png" alt="Creative Flow - output structured data." width="700">
+      <p class="small">"Creative Flow - outputs structured data in json format.</p>
+  </div>
+
+   
+  <div class="call-to-action">
+      <h2>Ready to transform your raw creatives data into AI-ready intelligence?</h2>
+      <p>One-time payment. Lifetime updates. No subscriptions. Zero cloud dependency.</p>
+      <a href="https://autopyai.github.io/payment.html" class="buy-btn">Buy Now — $99 One-Time</a>
+  </div>
+
+
+    <div class="footer-brand">
+      © 2025 Creative Flow — Made by Suhail Asghar. All rights reserved.
+    </div>
+  </main>
+
+</body>
+</html>
