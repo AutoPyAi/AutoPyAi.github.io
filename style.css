@@ -485,8 +485,8 @@ main {
   color: var(--medium-blue);
 }
 
-/* AutoPyAI Slogan Header — with higher priority */
-h3.autopyai-slogan {
+/* AutoPyAI Slogan Header — with maximum priority */
+body h3.autopyai-slogan {
   background: linear-gradient(135deg, #003366, #0055aa) !important;
   color: white !important;
   margin: 0 !important;
@@ -499,9 +499,10 @@ h3.autopyai-slogan {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
   font-size: 1.1em !important;
 }
-.autopyai-slogan a {
-  color: white;
-  text-decoration: underline;
+
+body h3.autopyai-slogan a {
+  color: white !important;
+  text-decoration: underline !important;
 }
 
 
