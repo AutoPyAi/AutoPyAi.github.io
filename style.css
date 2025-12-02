@@ -474,6 +474,26 @@ main {
   background: #bfdbfe;
 }
 
+/* AutoPyAI Slogan Header */
+.autopyai-slogan {
+  background: linear-gradient(135deg, #003366, #0055aa);
+  color: white;
+  margin: 0;
+  padding: 14px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #007BFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.1em;
+}
+
+.autopyai-slogan a {
+  color: white;
+  text-decoration: underline;
+}
+
 .github-link {
   background: #f1f5f9;
   color: #334155;
@@ -483,3 +503,4 @@ main {
   background: #e2e8f0;
   color: var(--medium-blue);
 }
+
