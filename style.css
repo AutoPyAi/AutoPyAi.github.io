@@ -474,6 +474,17 @@ main {
   background: #bfdbfe;
 }
 
+
+.github-link {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.github-link:hover {
+  background: #e2e8f0;
+  color: var(--medium-blue);
+}
+
 /* AutoPyAI Slogan Header */
 .autopyai-slogan {
   background: linear-gradient(135deg, #003366, #0055aa);
@@ -494,13 +505,4 @@ main {
   text-decoration: underline;
 }
 
-.github-link {
-  background: #f1f5f9;
-  color: #334155;
-}
-
-.github-link:hover {
-  background: #e2e8f0;
-  color: var(--medium-blue);
-}
 
