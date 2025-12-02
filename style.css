@@ -485,25 +485,11 @@ main {
   color: var(--medium-blue);
 }
 
-/* AutoPyAI Slogan Header — with maximum priority */
-body h3.autopyai-slogan {
-  background: linear-gradient(135deg, #003366, #0055aa) !important;
-  color: white !important;
-  margin: 0 !important;
-  padding: 14px 20px !important;
-  text-align: center !important;
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.5px !important;
-  border-bottom: 3px solid #007BFF !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-  font-size: 1.1em !important;
-}
 
-body h3.autopyai-slogan a {
-  color: white !important;
-  text-decoration: underline !important;
-}
+
+
+
+
 
 
 
